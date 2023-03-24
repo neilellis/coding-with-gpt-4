@@ -30,7 +30,7 @@ Once you're happy with the code that writes to the database you can ask it to ex
 
 Arguably the largest single improvement is the size of the context in GPT-4. Context is the working memory of the AI, it's you instructions and it's responses. In GPT-3.5 it was 3K now it's 30K tokens. This is still not large enough to hold an entire typical application in memory. But it is large enough to write a small prototype or large enough to help you debug or improve a large script/class etc.
 
-The reason why context is so important is that with GPT-3.5 you can ask it to write a small application including the database schema, some backend code, a REST API, a web application and the dockerfiles and docker compose files to launch them all with. Because it can hold so much in context it knows what the schema is when it writes the REST API. And as you back and forwards with changes or clarifications it doesn't lose site of the overall application.
+The reason why context is so important is that with GPT-4 you can ask it to write a small application including the database schema, some backend code, a REST API, a web application and the dockerfiles and docker compose files to launch them all with. Because it can hold so much in context it knows what the schema is when it writes the REST API. And as you back and forwards with changes or clarifications it doesn't lose site of the overall application.
 
 Inevitably the code will become larger than the context and you'll need to paste in whole files again and ask for operations against those files.
 
