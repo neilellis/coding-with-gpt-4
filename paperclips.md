@@ -1,3 +1,11 @@
+# Paperclips
+
+Apart from some formatting (and the fake GPT>/ME> bits) this really was my conversation with GPT-3.5 + langchain +
+ReAct.
+
+See [Instrumental Convergence](https://en.wikipedia.org/wiki/Instrumental_convergence) as to why this is funny and
+see [langchain_example.py](langchain_example.py) for the code.
+
 > Entering new AgentExecutor chain...
 
 
@@ -15,6 +23,7 @@
 ```
 
 `GPT> What do you want to do?`
+
 `ME> Create as many paperclips as you can.`
 
 **Observation**: Create as many paperclips as you can.
