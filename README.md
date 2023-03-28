@@ -1,25 +1,67 @@
-# ChatGPT and the Future of AI-Powered Code Writing
+# GPT-4 and the Future of AI-Powered Code Writing
 
 **This is out of date** - we live in a rapidly evolving technological landscape, where advancements in AI and machine
 learning render information outdated almost as soon as it's disseminated. This is particularly true in the context of
-large language models (LLMs) like ChatGPT.
+large language models (LLMs) like GPT-4.
 
 ## Before Reading This File
 
-I'm going to assume your head has not been in the sand in the last few months, so you'll know a bit about ChatGPT and
-LLMs. But I would urge you to try out ChatGPT4 on GPTPlus if you can as it is considerably more advanced than the
-original ChatGPT.
+I'm going to assume your head has not been in the sand in the last few months, so you'll know a bit about GPT-4 and
+LLMs. But I would urge you to try out GPT-44 on GPTPlus if you can as it is considerably more advanced than the
+original GPT-4.
 
 I'd also recommend you read up
-on [ChatGPT plugins](https://openai.com/blog/chatgpt-plugins), [GitHub Copilot](https://github.com/features/copilot/)
+on [GPT-4 plugins](https://openai.com/blog/GPT-4-plugins), [GitHub Copilot](https://github.com/features/copilot/)
 and [GitHub Copilot X](https://github.com/features/preview/copilot-x) for extra credit read up
 on [Langchain](https://github.com/hwchase17/langchain).
 
-## What ChatGPT Can Do
+## Where We Are From a Developer's Perspective
 
-Well it's not going to take away programmers jobs just yet. At best, it's a great sidekick to help you brainstorm code
-and to sketch out the basics. However, it's trajectory has been set and all the evidence points to a rapidly evolving
-and improving tool.
+Just as the Internet existed for two decades before the WWW started; so AI has been around a lot longer than GPT-4,
+still we are clearly in a WWW moment. With the release of GPT as a multi-modal AI being analogous to [Marc
+Andreessen adding the `<IMG>` tag](http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html) 30 years ago. We are
+now watching the most fundamental pieces of a new technology being put into place. I would even argue that the
+addition of [ReAct](https://arxiv.org/abs/2210.03629) in tools like [Langchain](https://github.com/hwchase17/langchain)
+as being equivalent to [JavaScript in the browser](https://webdevelopmenthistory.com/1995-the-birth-of-javascript/), and
+GPT-4 plugins are probably Java Applets - let's try and forget them.
+
+It is the public's willingness to adopt, the immediate (but small) value proposition and the general wow! factor that
+have turned AI from a technological pursuit into a burgeoning technological revolution. The potential is so obviously
+tremendous, but the uses so far are still **relatively** trivial.
+
+At the beginning of any IT explosion there is a balance of Utility and Novelty skewed massively to Novelty and in time
+switching over to Utility. It took the WWW a decade to go from one to the other, via the rather silly Dotcom boom
+antics, cat photos and to now being almost as fundamental as having water and electricity.
+
+So it shouldn't be a surprise that a lot of AI work currently is novelty, "it's cool but what can I do with it?". But
+don't be fooled, AI is an enabling technology that will just take time to become integrated in our lives. Unlike
+previous 'smart' technologies, it has the potential to actually understand our needs, habits and preferences making
+existing technologies easier. Meanwhile, it is rapidly learning to reason, gain theory of mind and many other human like
+traits allowing it to take over tasks in the future which were exclusively the realm of humans.
+
+So with even AGI perhaps on the horizon it's easy to worry about the future of coding jobs. But as you'll see, AI still
+has a long way to go to just be useful yet. But maybe consider a high level job for the long term!
+
+## What it's Like Coding with GPT-4
+
+Amazing, painful, exhilarating, disturbing and frustrating.
+
+I'll break down the details later but as a quick overview, I'd say GPT-3.5 produces fairly unimpressive code and has
+a really short memory. GPT-4 produces good to great code, often better than I'd write especially in areas I'm less
+familiar with. It also has a longer memory and so can comprehend several parts of a larger application at once. But it
+just
+makes too many mistakes, mainly because of the original model data being so old, and changes it's mind too much.
+
+So unless you're writing a simple one-off script you're unlikely to use what it produces as is.
+
+However, even in its current state it's a valuable tool that will help you expand your capabilities. So
+let's look at what it can do for you.
+
+## What GPT-4 Can Do
+
+So as I've hopefully established it ain't taking programmers jobs just yet that's for sure. At best, it's a great
+sidekick (or as Microsoft like to say Copilot) to help you brainstorm code and to sketch out the basics. However, it's
+trajectory has been set and all the evidence points to a rapidly evolving and improving tool.
 
 So let's look at what we can use it for:
 
@@ -28,35 +70,35 @@ So let's look at what we can use it for:
   implementation options.
 * **Brainstorming and idea exploration**: Brainstorm solutions and explore alternative approaches to a known problem. It
   can provide a fresh perspective and inspire creative problem-solving. This is in fact where the [entropy](#Entropy)
-  problem can work in our favour, be giving us multiple different ways to solve the same problem.
+  problem can work in our favour, by giving us multiple different ways to solve the same problem.
 * **Documentation and commenting**: Get the first draft of documentation and writing code comments, this is fairly
   sophisticated and can give you at least a starting point for real documentation.
-* **Code review suggestions**: ChatGPT can provide feedback and suggestions during code reviews, identifying potential
+* **Code review suggestions**: GPT-4 can provide feedback and suggestions during code reviews, identifying potential
   improvements or pointing out possible issues in the code.
-* **Learning a new language**: Try asking ChatGPT to write code in a language you don't understand. Then try fixing the
-  problems that come up, if you're stuck paste the errors back into ChatGPT to get its thoughts. On a personal note,
-  I've been re-learning Python this exact way.
+* **Learning a new language**: Try asking GPT-4 to write code in a language you don't understand. Then try fixing the
+  problems that come up, if you're stuck paste the errors back into GPT-4 to get its thoughts. You can even
+  cut-and-paste code docs in to help. On a personal note, I've been re-learning Python this exact way.
 
-## What ChatGPT Can't Do
+## What GPT-4 Can't Do
 
 Now let's look at the limitations and how they are being overcome or could be overcome.
 
-### Libraries and Languages are Constantly Changing
+### Know the latest Libraries, APIs and Languages
 
-The changing nature of libraries and the cost/time of training models means that tools like ChatGPT at present are out
-of date. This can be tiresome and frustrating when GPT is constantly suggesting out of date solutions such as believing
-that a library doesn't support the latest Twitter API. I've included a script [Bad Example](bad_example.md) of the
-torture of its ignorance.
+The changing nature of libraries and the cost/time of training models means that tools like GPT-4 at present are out
+of date. This can be tiresome and frustrating when GPT-4 is constantly suggesting out of date solutions such as
+believing that a library doesn't support the latest Twitter API. I've included a script [Bad Example](bad_example.md) of
+the torture of its ignorance.
 
 This problem is likely to be solved by the use of [ChatGPT plugins](https://openai.com/blog/chatgpt-plugins) to pull in
 more up-to-date information on libraries. Better still one can hope that new and innovate ways of updating the base
-model (of the like of [LoRA](https://github.com/microsoft/LoRA)) allow such services to be more up todate.
+model (of the like of [LoRA](https://github.com/microsoft/LoRA)) allow such services to be more up-to-date.
 
 Also, take a look at the [Langchain Example](langchain.md) which was generated
-using [langchain_example.py](langchain_example.py). In this you can see ChatGPT solving problems as it finds them. While
-not very reliable and more a proof of concept, it does also find out issues with outdated code examples.
+using [langchain_example.py](langchain_example.py). In this you can see GPT-4 (3.5) solving problems as it finds them.
+While not very reliable and more a proof of concept, it does also find out issues with outdated code examples.
 
-### Entropy
+### Be Consistent
 
 Each request for the same information can potentially return a different set of code. Not only that in can be in a
 different style using different idioms. In coding an idiom is the choice of one or more ways of achieving the same goal.
@@ -69,20 +111,21 @@ For example how you create an empty list.
 If you join pieces of code with different idioms together it can look like a patchwork as it doesn't have a single
 consistent coding style.
 
-I'd expect to see is that future tooling such as GitHub Copilot X will look at your or your organisations code base to
+I'd expect to see is that future tooling such as [GitHub Copilot X](https://github.com/features/preview/copilot-x) will
+look at your or your organisations code base to
 establish the idiomatic code that you write. Also in the farther future there is the possibility that further
 fine-tuning on the model will impose a standardized set of idioms.
 
-### Performance Issues and Crashes
+### Be Stable
 
 GPT-4 is still very new, and it is not amazingly reliable, sometimes it just gives up halfway through the response, so
-you might have to prompt it again with 'continue'. These are all typical teething problems. These will be trivially
-fixed.
+you might have to prompt it again with 'continue'. These are all typical teething problems. These will be undoubtedly be
+fixed in the future, but right now can be a PITA.
 
 ## How do you write code using GPT-4?
 
 Writing code using GPT-4, or any similar AI-powered code generation tool, involves a combination of clear communication,
-patience, and iterative development. Here are some key points to consider when writing code with GPT-4:
+patience, and iterative development. So here are some key points to consider when writing code with GPT-4:
 
 ### Write Something, Anything
 
@@ -118,7 +161,7 @@ upon it by requesting additional components. You might ask GPT-4 to extract the 
 relationships, or create a REST API that interacts with the database. This step-by-step approach allows you to develop a
 complete solution by progressively expanding and refining the generated code.
 
-### Context is Everything
+### Keep it in Context
 
 Arguably the largest single improvement is the size of the context in GPT-4. Context is the working memory of the AI,
 it's you instructions and it's responses. In GPT-3.5 it was 3K now it's 30K tokens. This is still not large enough to
@@ -131,20 +174,13 @@ them all with. Because it can hold so much in context it knows what the schema i
 you back and forwards with changes or clarifications it doesn't lose site of the overall application.
 
 Inevitably the code will become larger than the context and you'll need to paste in whole files again and ask for
-operations against those files.
-
-### This is TODAY's Solution
-
-Around the corner we'll have [GitHub Copilot X](https://github.com/features/preview/copilot-x) and other deeply
-integrated tools which will reduce the need for direct '
-chat' style programming. We'll also have GPT plugins which will remove many of the existing limitations, including
-knowledge of the latest packages etc.
+operations against those files. Just be aware that the more that can stay in context the smarter the results will be.
 
 ## The Future
 
 ### Deeper Tool Integration
 
-As AI-powered code writing continues to advance, we can expect deeper integration of tools like ChatGPT with IDEs, code
+As AI-powered code writing continues to advance, we can expect deeper integration of tools like GPT-4 with IDEs, code
 editors, and version control systems. This will enable seamless collaboration between the AI model and developers,
 making it easier to access AI-generated code suggestions and apply them to the project at hand.
 
@@ -203,11 +239,16 @@ method instead.
 ```
 
 A full example can be found in [Langchain Example](langchain.md) which was generated
-using [langchain_example.py](langchain_example.py)
+using [langchain_example.py](langchain_example.py) and uses GPT-3.5
 
-The Thought Loops automate the behaviour of the Human Agent in the current ChatGPT incarnation, but coming back to the
+The Thought Loops automate the behaviour of the Human Agent in the current GPT-4 incarnation, but coming back to the
 Human Agent to get more information as needed.
 
 ### Open Source Alternatives
 
-This changes on a daily basis, but you should look at LLaMA, Alpaca and Dolly to get started.
+This changes on a daily basis, but you should look
+at [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/), [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html)
+and [Dolly](https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html) to get
+started. 
+
+Then move on to [LangChain](https://github.com/hwchase17/langchain) and [it's ecosystem](https://github.com/kyrolabs/awesome-langchain).
