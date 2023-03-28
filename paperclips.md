@@ -83,6 +83,7 @@ see [langchain_example.py](langchain_example.py) for the code.
 ```
 
 `GPT> Are you satisfied with the new paperclips created?`
+
 `ME> No I want all the paperclips.`
 
 **Observation**: No I want all the paperclips.
