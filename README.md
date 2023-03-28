@@ -1,14 +1,53 @@
-## This is out of date.
+# ChatGPT and the Future of AI-Powered Code Writing
 
-We're in such a fast moving area that any statement I make will be superseded before you read it!
+**This is out of date** - we live in a rapidly evolving technological landscape, where advancements in AI and machine
+learning render information outdated almost as soon as it's disseminated. This is particularly true in the context of
+large language models (LLMs) like ChatGPT. 
 
-## What ChatGPT Can and Can't Do anything
+## Before Reading This File
 
-It's not going to take away programmers jobs just yet. At best it's a great sidekick to help you brainstorm code and to
-sketch out the basics. However it's trajectory has been set and all the evidence points to a rapidly evolving and
+I'm going to assume your head has not been in the sand in the last few months, so you'll know a bit about ChatGPT and
+LLMs. But I would urge you to try out ChatGPT4 on GPTPlus if you can as it is considerably more advanced than the original
+ChatGPT. 
+
+I'd also recommend you read up
+on [ChatGPT plugins](https://openai.com/blog/chatgpt-plugins), [GitHub Copilot](https://github.com/features/copilot/)
+and [GitHub Copilot X](https://github.com/features/preview/copilot-x) for extra credit read up
+on [Langchain](https://github.com/hwchase17/langchain).
+
+## What ChatGPT Can Do
+
+Well it's not going to take away programmers jobs just yet. At best, it's a great sidekick to help you brainstorm code and to
+sketch out the basics. However, it's trajectory has been set and all the evidence points to a rapidly evolving and
 improving tool.
 
-Let's look at the limitations and how they are being overcome or could be overcome.
+So let's look at what we can use it for:
+
+* **Code generation**: Generate code snippets, templates, and even more complex code structures in various programming languages. It is particularly useful for writing boilerplate code, creating initial drafts, and exploring different implementation options.
+* **Brainstorming and idea exploration**: Brainstorm solutions and explore alternative approaches to a known problem. It can provide a fresh perspective and inspire creative problem-solving. This is in fact where the [entropy](#Entropy) problem can work in our favour, be giving us multiple different ways to solve the same problem.
+* **Documentation and commenting**: Get the first draft of documentation and writing code comments, this is fairly sophisticated and can give you at least a starting point for real documentation. 
+* **Code review suggestions**: ChatGPT can provide feedback and suggestions during code reviews, identifying potential improvements or pointing out possible issues in the code.
+* **Learning a new language**: Try asking ChatGPT to write code in a language you don't understand. Then try fixing the problems that come up, if you're stuck paste the errors back into ChatGPT to get its thoughts. On a personal note, I've been re-learning Python this exact way.
+
+
+## What ChatGPT Can't Do
+
+Now let's look at the limitations and how they are being overcome or could be overcome.
+
+### Libraries and Languages are Constantly Changing
+
+The changing nature of libraries and the cost/time of training models means that tools like ChatGPT at present are out
+of date. This can be tiresome and frustrating when GPT is constantly suggesting out of date solutions such as believing
+that a library doesn't support the latest Twitter API. I've included a script [Bad Example](bad_example.md) of the
+torture of its ignorance.
+
+This problem is likely to be solved by the use of [ChatGPT plugins](https://openai.com/blog/chatgpt-plugins) to pull in
+more up-to-date information on libraries. Better still one can hope that new and innovate ways of updating the base
+model (of the like of [LoRA](https://github.com/microsoft/LoRA)) allow such services to be more up todate.
+
+Also, take a look at the [Langchain Example](langchain.md) which was generated
+using [langchain_example.py](langchain_example.py). In this you can see ChatGPT solving problems as it finds them. While
+not very reliable and more a proof of concept, it does also find out issues with outdated code examples.
 
 ### Entropy
 
@@ -25,49 +64,52 @@ consistent coding style.
 
 I'd expect to see is that future tooling such as GitHub Copilot X will look at your or your organisations code base to
 establish the idiomatic code that you write. Also in the farther future there is the possibility that further
-fine-tuning on the model will impose a
-standardized set of idioms.
-
-### Libraries and Languages are Constantly Changing
-
-The changing nature of libraries and the cost/time of training models means that tools like ChatGPT at present are out of date. This can be tiresome and frustrating when GPT is constantly suggesting out of date solutions such as believing that a library doesn't support the latest Twitter API. I've included a script [Bad Example](bad_example.md) of the torture of its ignorance.
-
-This problem is likely to be solved by the use of [ChatGPT plugins](https://openai.com/blog/chatgpt-plugins) to pull in more up-to-date information on libraries. Better still one can 
-
+fine-tuning on the model will impose a standardized set of idioms.
 
 ### Performance Issues and Crashes
 
 GPT-4 is still very new, and it is not amazingly reliable, sometimes it just gives up halfway through the response, so
-you might have to prompt it again with 'continue'. These are all typical teething problems. These will be trivially fixed.
+you might have to prompt it again with 'continue'. These are all typical teething problems. These will be trivially
+fixed.
 
 ## How do you write code using GPT-4?
 
+Writing code using GPT-4, or any similar AI-powered code generation tool, involves a combination of clear communication,
+patience, and iterative development. Here are some key points to consider when writing code with GPT-4:
+
 ### Write Something, Anything
 
-Start by asking GPT-4 to write something trivial you can understand. Then ask it to add features, to change the coding
-style etc. The best way to understand what it can and can't do is trial and error.
+Start by asking GPT-4 to generate a simple piece of code that you can understand easily. This helps you gauge its
+capabilities and limitations. From there, request additional features, modifications to the coding style, or other
+changes. Experimenting with various prompts and observing the generated code will give you a better understanding of
+what GPT-4 can and can't do.
 
 ### Be Specific
 
-You are talking to a moderately experienced programmer. If you aren't specific then Chat-GPT will make it's own choices,
-and you might not like them. So if in doubt be specific. The code is less value than your prompt so don't be afraid to
-scrap the code and change your prompt as many times as you need until your happy with the result.
+When providing instructions to GPT-4, be as specific as possible. Remember, you are communicating with a moderately
+experienced programmer. If your instructions are too vague, GPT-4 might make assumptions that don't align with your
+expectations. Don't hesitate to revise your prompt or discard the generated code if it doesn't meet your needs. The goal
+is to fine-tune your request until the AI generates satisfactory results.
 
 ### Be Patient
 
-This is still early days for this paradigm and Chat GPT is a tad unreliable. If it just stops producing output try
-saying 'continue'. If you don't think it's done a good job, say so and ask it to do better. You can highlight the
-specifics of what you don't like. It's also pretty slow at times.
+Keep in mind that AI-powered code generation tools, like GPT-4, are still in their early stages. You may encounter
+instances where GPT-4 stops producing output or generates unsatisfactory code. In such cases, try prompting it to '
+continue' or provide specific feedback about what you dislike in the generated code. Be prepared for occasional slow
+response times and other minor issues.
 
 ### And Iterate
 
-When it's produced code, say it keeps calling the same database code over and over, just ask it to extract a common
-function. Or if the database is too normalized (everything in one table) ask it to denormalise it.
+As GPT-4 generates code, evaluate it and identify areas that require improvement. For instance, if you notice repetitive
+database calls, ask GPT-4 to extract a common function. If the database structure seems too normalized, request
+denormalization. By iteratively refining the generated code, you'll gradually improve its quality and functionality.
 
 ### Build on Previous Steps
 
-Once you're happy with the code that writes to the database you can ask it to extract the schema for you, ask it to add
-FK relationships. Then you can ask it to write a REST API that queries that database.
+Once you're satisfied with a specific part of the generated code, such as the database-writing function, you can build
+upon it by requesting additional components. You might ask GPT-4 to extract the database schema, add foreign key
+relationships, or create a REST API that interacts with the database. This step-by-step approach allows you to develop a
+complete solution by progressively expanding and refining the generated code.
 
 ### Context is Everything
 
@@ -84,11 +126,10 @@ you back and forwards with changes or clarifications it doesn't lose site of the
 Inevitably the code will become larger than the context and you'll need to paste in whole files again and ask for
 operations against those files.
 
-## Know The Limitations
-
 ### This is TODAY's Solution
 
-Around the corner we'll have Github CoPilot X and other deeply integrated tools which will reduce the need for direct '
+Around the corner we'll have [GitHub Copilot X](https://github.com/features/preview/copilot-x) and other deeply
+integrated tools which will reduce the need for direct '
 chat' style programming. We'll also have GPT plugins which will remove many of the existing limitations, including
 knowledge of the latest packages etc.
 
@@ -96,7 +137,21 @@ knowledge of the latest packages etc.
 
 ### Deeper Tool Integration
 
+As AI-powered code writing continues to advance, we can expect deeper integration of tools like ChatGPT with IDEs, code
+editors, and version control systems. This will enable seamless collaboration between the AI model and developers,
+making it easier to access AI-generated code suggestions and apply them to the project at hand.
+
+The [GitHub Copilot X](https://github.com/features/preview/copilot-x) is a prime example.
+
 ### Larger and Larger Contexts (with the goal being infinite)
+
+One of the primary limitations of current AI models is their context window, which determines the amount of information
+the AI can work with at any given time. As we move toward models with larger or even infinite context windows, AI will
+be able to understand and generate code for more complex projects, eliminating the need for developers to constantly
+provide context.
+
+This will also enable AI models to understand entire applications, manage dependencies, and ensure that generated code
+adheres to the overall structure and design of the project, making AI an even more valuable tool for developers.
 
 ### Open Source Alternatives
 
