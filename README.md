@@ -4,8 +4,41 @@ We're in such a fast moving area that any statement I make will be superseded be
 
 ## What ChatGPT Can and Can't Do anything
 
-It's not going to take away programmers jobs just yet. At best it's a great sidekick to help you brainstorm code and to 
-sketch out the basics. However it's trajectory will definitely change the
+It's not going to take away programmers jobs just yet. At best it's a great sidekick to help you brainstorm code and to
+sketch out the basics. However it's trajectory has been set and all the evidence points to a rapidly evolving and
+improving tool.
+
+Let's look at the limitations and how they are being overcome or could be overcome.
+
+### Entropy
+
+Each request for the same information can potentially return a different set of code. Not only that in can be in a
+different style using different idioms. In coding an idiom is the choice of one or more ways of achieving the same goal.
+For example how you create an empty list.
+
+```empty_list = []```
+
+```empty_list = list()```
+
+If you join pieces of code with different idioms together it can look like a patchwork as it doesn't have a single
+consistent coding style.
+
+I'd expect to see is that future tooling such as GitHub Copilot X will look at your or your organisations code base to
+establish the idiomatic code that you write. Also in the farther future there is the possibility that further
+fine-tuning on the model will impose a
+standardized set of idioms.
+
+### Libraries and Languages are Constantly Changing
+
+The changing nature of libraries and the cost/time of training models means that tools like ChatGPT at present are out of date. This can be tiresome and frustrating when GPT is constantly suggesting out of date solutions such as believing that a library doesn't support the latest Twitter API. I've included a script [Bad Example](bad_example.md) of the torture of its ignorance.
+
+This problem is likely to be solved by the use of [ChatGPT plugins](https://openai.com/blog/chatgpt-plugins) to pull in more up-to-date information on libraries. Better still one can 
+
+
+### Performance Issues and Crashes
+
+GPT-4 is still very new, and it is not amazingly reliable, sometimes it just gives up halfway through the response, so
+you might have to prompt it again with 'continue'. These are all typical teething problems. These will be trivially fixed.
 
 ## How do you write code using GPT-4?
 
@@ -52,18 +85,6 @@ Inevitably the code will become larger than the context and you'll need to paste
 operations against those files.
 
 ## Know The Limitations
-
-### Entropy
-
-Each request for the same information can potentially return a different set of code. Not only that in can be in a
-different style using different idioms. If you join these pieces of code together it can look like a patchwork as it
-doesn't have a single consistent coding style.
-
-### Performance Issues and Crashes
-
-GPT-4 is still very new, and it is not amazingly reliable, sometimes it just gives up halfway through the response, so
-you
-might have to prompt it again with 'continue'. These are all typical teething problems.
 
 ### This is TODAY's Solution
 

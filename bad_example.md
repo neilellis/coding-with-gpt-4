@@ -313,6 +313,4 @@ Okay so finally I put in my fixed query
 
 Okay that's progress but still it's persisting the data incorrectly:
 
-> but I need the nuts data to be stored in a separate table this code doesn't do it.
-
-> I'd like to filter out all the tweets that don't have geo information
+... AND SO ON
