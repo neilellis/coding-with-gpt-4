@@ -1,7 +1,7 @@
 # Paperclips
 
-Apart from some formatting (and the fake GPT>/ME> bits) this really was my conversation with GPT-3.5 + langchain +
-ReAct.
+Apart from some formatting (and the fake GPT>/ME> bits) this really was my conversation with GPT-3.5 + [LangChain](https://github.com/hwchase17/langchain) +
+[ReAct](https://react-lm.github.io).
 
 See [Instrumental Convergence](https://en.wikipedia.org/wiki/Instrumental_convergence) as to why this is funny and
 see [langchain_example.py](langchain_example.py) for the code.
