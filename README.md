@@ -2,13 +2,13 @@
 
 **This is out of date** - we live in a rapidly evolving technological landscape, where advancements in AI and machine
 learning render information outdated almost as soon as it's disseminated. This is particularly true in the context of
-large language models (LLMs) like ChatGPT. 
+large language models (LLMs) like ChatGPT.
 
 ## Before Reading This File
 
 I'm going to assume your head has not been in the sand in the last few months, so you'll know a bit about ChatGPT and
-LLMs. But I would urge you to try out ChatGPT4 on GPTPlus if you can as it is considerably more advanced than the original
-ChatGPT. 
+LLMs. But I would urge you to try out ChatGPT4 on GPTPlus if you can as it is considerably more advanced than the
+original ChatGPT.
 
 I'd also recommend you read up
 on [ChatGPT plugins](https://openai.com/blog/chatgpt-plugins), [GitHub Copilot](https://github.com/features/copilot/)
@@ -17,18 +17,25 @@ on [Langchain](https://github.com/hwchase17/langchain).
 
 ## What ChatGPT Can Do
 
-Well it's not going to take away programmers jobs just yet. At best, it's a great sidekick to help you brainstorm code and to
-sketch out the basics. However, it's trajectory has been set and all the evidence points to a rapidly evolving and
-improving tool.
+Well it's not going to take away programmers jobs just yet. At best, it's a great sidekick to help you brainstorm code
+and to sketch out the basics. However, it's trajectory has been set and all the evidence points to a rapidly evolving
+and improving tool.
 
 So let's look at what we can use it for:
 
-* **Code generation**: Generate code snippets, templates, and even more complex code structures in various programming languages. It is particularly useful for writing boilerplate code, creating initial drafts, and exploring different implementation options.
-* **Brainstorming and idea exploration**: Brainstorm solutions and explore alternative approaches to a known problem. It can provide a fresh perspective and inspire creative problem-solving. This is in fact where the [entropy](#Entropy) problem can work in our favour, be giving us multiple different ways to solve the same problem.
-* **Documentation and commenting**: Get the first draft of documentation and writing code comments, this is fairly sophisticated and can give you at least a starting point for real documentation. 
-* **Code review suggestions**: ChatGPT can provide feedback and suggestions during code reviews, identifying potential improvements or pointing out possible issues in the code.
-* **Learning a new language**: Try asking ChatGPT to write code in a language you don't understand. Then try fixing the problems that come up, if you're stuck paste the errors back into ChatGPT to get its thoughts. On a personal note, I've been re-learning Python this exact way.
-
+* **Code generation**: Generate code snippets, templates, and even more complex code structures in various programming
+  languages. It is particularly useful for writing boilerplate code, creating initial drafts, and exploring different
+  implementation options.
+* **Brainstorming and idea exploration**: Brainstorm solutions and explore alternative approaches to a known problem. It
+  can provide a fresh perspective and inspire creative problem-solving. This is in fact where the [entropy](#Entropy)
+  problem can work in our favour, be giving us multiple different ways to solve the same problem.
+* **Documentation and commenting**: Get the first draft of documentation and writing code comments, this is fairly
+  sophisticated and can give you at least a starting point for real documentation.
+* **Code review suggestions**: ChatGPT can provide feedback and suggestions during code reviews, identifying potential
+  improvements or pointing out possible issues in the code.
+* **Learning a new language**: Try asking ChatGPT to write code in a language you don't understand. Then try fixing the
+  problems that come up, if you're stuck paste the errors back into ChatGPT to get its thoughts. On a personal note,
+  I've been re-learning Python this exact way.
 
 ## What ChatGPT Can't Do
 
@@ -153,6 +160,54 @@ provide context.
 This will also enable AI models to understand entire applications, manage dependencies, and ensure that generated code
 adheres to the overall structure and design of the project, making AI an even more valuable tool for developers.
 
+### Plugins, Thought Loops and Trial & Error
+
+The largest single difference between Chat GPT and a human programmer is the thought loops we pass through as we work on
+code.
+
+We start with a potential solution, just like Chat GPT does. But then we run the code, realise we've got bugs, look at
+the errors, almost certainly Google or Stack Overflow some of them. Think through the problem, paste in some code,
+adjust it. Test the code. Realise we're doing it the wrong way, or a library is rubbish, try another way of coding the
+same problem, etc.
+
+This trial and error approach can be simulated using Langchain and a ReAct loop.
+
+This looks like:
+
+AI> **_What would you like me to do?_**
+
+User> `Write python code to download 10 tweets about floods using the Twitter v2 API and tweepy.`
+
+**Observation**: Write python code to download 10 tweets about floods using the Twitter v2 API and tweepy.
+Thought:I can use the `requests_get` tool to make a GET request to the Twitter API and tweepy library to authenticate
+the request.
+Action:
+
+```
+{
+  "action": "Python REPL",
+  "action_input": "import tweepy\n\n# Authenticate to Twitter\nauth = tweepy.OAuth2BearerToken('YOUR_BEARER_TOKEN')\n\n# Create API object\napi = tweepy.API(auth, wait_on_rate_limit=True,\n    wait_on_rate_limit_notify=True)\n\n# Define search query and number of tweets\nquery = 'floods'\nmax_tweets = 10\n\n# Collect tweets\ntweets = tweepy.Cursor(api.search_tweets,\n              q=query).items(max_tweets)\n\n# Print tweets\nfor tweet in tweets:\n    print(tweet.text)\n"
+}
+```
+
+**Observation**: module 'tweepy' has no attribute 'OAuth2BearerToken'
+**Thought**:I need to use the correct method to authenticate with the Twitter API using tweepy. I will use the `Bearer`
+method instead.
+**Action**:
+
+```
+{
+  "action": "Python REPL",
+  "action_input": "import tweepy\n\n# Authenticate to Twitter\nauth = tweepy.AppAuthHandler('YOUR_API_KEY', 'YOUR_API_SECRET_KEY')\n\n# Create API object\napi = tweepy.API(auth, wait_on_rate_limit=True,\n    wait_on_rate_limit_notify=True)\n\n# Define search query and number of tweets\nquery = 'floods'\nmax_tweets = 10\n\n# Collect tweets\ntweets = tweepy.Cursor(api.search_tweets,\n              q=query).items(max_tweets)\n\n# Print tweets\nfor tweet in tweets:\n    print(tweet.text)\n"
+}
+```
+
+A full example can be found in [Langchain Example](langchain.md) which was generated
+using [langchain_example.py](langchain_example.py)
+
+The Thought Loops automate the behaviour of the Human Agent in the current ChatGPT incarnation, but coming back to the
+Human Agent to get more information as needed.
+
 ### Open Source Alternatives
 
-## The Example
+This changes on a daily basis, but you should look at LLaMA, Alpaca and Dolly to get started.
