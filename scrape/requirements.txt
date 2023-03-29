@@ -1,0 +1,4 @@
+snscrape
+requests
+bs4
+openai

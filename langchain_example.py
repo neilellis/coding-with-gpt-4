@@ -16,7 +16,7 @@ from langchain.agents import initialize_agent
 from langchain.chat_models import ChatOpenAI
 
 
-llm = ChatOpenAI(model='gpt-3.5-turbo',temperature=0.2)
+llm = ChatOpenAI(model='gpt-3.5-turbo',temperature=0.5)
 tools = load_tools(['python_repl', 'requests', 'terminal', 'serpapi', 'wikipedia', 'human',  'pal-math', 'pal-colored-objects'], llm=llm)
 
 agent = initialize_agent(tools, llm, agent="chat-zero-shot-react-description", verbose=True)

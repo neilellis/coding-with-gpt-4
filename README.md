@@ -6,7 +6,36 @@ learning render information outdated almost as soon as it's disseminated. This i
 large language models (LLMs) like GPT-4. If you want to follow developments from a coding perspective I'd recommend you
 visit [Hacker News](https://news.ycombinator.com/news).
 
-## Before Reading This File
+<!-- TOC -->
+* [GPT-4 the Current and Future State of AI-Powered Code Writing](#gpt-4-the-current-and-future-state-of-ai-powered-code-writing)
+  * [Before Reading This](#before-reading-this)
+  * [Where We Are From a Developer's Perspective](#where-we-are-from-a-developers-perspective)
+  * [What it's Like Coding with GPT-4](#what-its-like-coding-with-gpt-4)
+  * [What It Can Do](#what-it-can-do)
+  * [What It Can't Do](#what-it-cant-do)
+    * [Know the latest Libraries, APIs and Languages](#know-the-latest-libraries-apis-and-languages)
+    * [Be Consistent](#be-consistent)
+    * [Be Stable](#be-stable)
+  * [How do you write code using GPT-4?](#how-do-you-write-code-using-gpt-4)
+    * [Write Something, Anything](#write-something-anything)
+    * [Be Specific](#be-specific)
+    * [Be Patient](#be-patient)
+    * [And Iterate](#and-iterate)
+    * [Build on Previous Steps](#build-on-previous-steps)
+    * [Keep it in Context](#keep-it-in-context)
+  * [The Future](#the-future)
+    * [Deeper Tool Integration](#deeper-tool-integration)
+    * [Larger and Larger Contexts (with the goal being infinite)](#larger-and-larger-contexts--with-the-goal-being-infinite-)
+    * [Plugins, Thought Loops and Trial & Error](#plugins-thought-loops-and-trial--error)
+    * [Open Source Alternatives](#open-source-alternatives)
+  * [An Example](#an-example)
+    * [Get Some News Headlines](#get-some-news-headlines)
+    * [Better Headlines with Summary](#better-headlines-with-summary)
+    * [In Summary](#in-summary)
+<!-- TOC -->
+
+
+## Before Reading This
 
 I'm going to assume your head has not been in the sand in the last few months, so you'll know a bit about ChatGPT, GPT-4
 and LLMs. But I would urge you to try out ChatGPT-4 on [ChatGPT Plus](https://openai.com/blog/chatgpt-plus) if you can
@@ -256,3 +285,248 @@ started.
 
 Then move on to [LangChain](https://github.com/hwchase17/langchain)
 and [it's ecosystem](https://github.com/kyrolabs/awesome-langchain).
+
+## An Example
+
+The following is an example of using GPT-4 to write some code, without any user editing. This is only really possible on relatively trivial code, if nothing else it shows what the near future could look like.
+
+### Get Some News Headlines
+
+**Prompt>** Get the latest headlines from BBC News using snscrape python library and put the results in headlines.md
+___
+**GPT>** As an AI language model, I cannot directly execute code or access real-time data from the internet. However, I can help you write a Python script that uses the snscrape library to fetch the latest headlines from BBC News and save them to a file called "headlines.md".
+
+First, make sure you have the snscrape library installed:
+```bash
+pip install snscrape
+```
+Then, you can create a Python script using the following code:
+
+```python
+import snscrape.modules.twitter as sntwitter
+import datetime
+import os
+
+
+# Function to get the latest headlines from BBC News
+def get_latest_headlines(user, num_headlines):
+    headlines = []
+    for i, tweet in enumerate(sntwitter.TwitterUserScraper(user).get_items()):
+        if i >= num_headlines:
+            break
+        headlines.append(tweet.content)
+    return headlines
+
+# Fetch the headlines
+num_headlines = 10
+bbc_headlines = get_latest_headlines('BBCNews', num_headlines)
+
+# Save the headlines to a file
+with open('headlines.md', 'w') as f:
+    for i, headline in enumerate(bbc_headlines):
+        f.write(f"{i + 1}. {headline}\n")
+
+print("Headlines saved to 'headlines.md'")
+
+```
+This script will fetch the 10 latest tweets from the BBC News Twitter account and save them to a file named "headlines.md". If you want to fetch more or fewer headlines, change the num_headlines variable accordingly.
+
+Please note that this script will fetch the latest tweets from the BBC News Twitter account, which may or may not be actual headlines.
+
+
+> And yes this does exactly as expected. You can run this yourself.
+
+### Better Headlines with Summary
+
+So now let's improve on this and get a summary and a photo for each headline. This helps to show the iterative process.
+
+___
+**Prompt>** Now alter the code so that it fetches the web page from the link in the Tweet, takes the first 1000 characters of paragraph text and sends them to openai to summarise. Now put the headlines and the summarised text in the markdown file headlines.md in markdown format.
+___
+**GPT>** As an AI language model, I cannot directly execute code or access real-time data from the internet. However, I can help you write a Python script that fetches the web page from the link in the tweet, extracts the first 1000 characters of paragraph text, sends them to OpenAI for summarization, and saves the headlines and summarized text in a Markdown file called "headlines.md".
+
+First, make sure you have the required libraries installed:
+
+```bash
+pip install snscrape requests bs4 openai
+```
+
+```python
+import snscrape.modules.twitter as sntwitter
+import requests
+from bs4 import BeautifulSoup
+import openai
+import re
+
+# Set up OpenAI API Key
+openai.api_key = "<your_openai_api_key>"
+
+# Function to get the latest headlines from BBC News
+def get_latest_headlines(user, num_headlines):
+    headlines = []
+    for i, tweet in enumerate(sntwitter.TwitterUserScraper(user).get_items()):
+        if i >= num_headlines:
+            break
+        headlines.append((tweet.content, tweet.urls[0] if tweet.urls else None))
+    return headlines
+
+# Function to extract the first 1000 characters of paragraph text from a URL
+def extract_text(url):
+    if not url:
+        return None
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    paragraphs = soup.find_all('p')
+    text = ' '.join([p.get_text() for p in paragraphs])
+    return text[:1000]
+
+# Function to summarize text using OpenAI
+def summarize_text(text):
+    if not text:
+        return None
+    response = openai.Completion.create(
+        engine="text-davinci-002",
+        prompt=f"Please summarize the following text:\n{text}\n",
+        max_tokens=50,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+
+    summary = response.choices[0].text.strip()
+    return summary
+
+# Fetch the headlines
+num_headlines = 10
+bbc_headlines = get_latest_headlines('BBCNews', num_headlines)
+
+# Process the headlines and save to a file
+with open('headlines.md', 'w') as f:
+    for i, (headline, url) in enumerate(bbc_headlines):
+        text = extract_text(url)
+        summary = summarize_text(text)
+        f.write(f"### {i + 1}. {headline}\n\n")
+        if summary:
+            f.write(f"{summary}\n\n")
+        else:
+            f.write("No summary available.\n\n")
+
+print("Headlines and summaries saved to 'headlines.md'")
+
+```
+
+> Running this will generate an error, so I pass the error back to GPT with no other comments
+
+___
+**Prompt>** 
+/Users/neil/IdeaProjects/coding-with-gpt-4/scrape/app_with_summary.py:16: DeprecatedFeatureWarning: content is deprecated, use rawContent instead
+  headlines.append((tweet.content, tweet.urls[0] if tweet.urls else None))
+Traceback (most recent call last):
+  File "/Users/neil/IdeaProjects/coding-with-gpt-4/scrape/app_with_summary.py", line 47, in <module>
+    bbc_headlines = get_latest_headlines('BBCNews', num_headlines)
+  File "/Users/neil/IdeaProjects/coding-with-gpt-4/scrape/app_with_summary.py", line 16, in get_latest_headlines
+    headlines.append((tweet.content, tweet.urls[0] if tweet.urls else None))
+AttributeError: 'Tweet' object has no attribute 'urls'
+___
+**GPT>** I apologize for the oversight. It seems that the 'urls' attribute is not directly available in the 'Tweet' object in snscrape. Instead, you can use the 'tcooutlinks' attribute to get the URLs. Also, I'll replace the deprecated 'content' attribute with 'rawContent'. Here's the updated code:
+___
+> Let's skip this code for now, it worked, but I now wanted to tweak the code to get exactly what I wanted, and since the BBC News feed wasn't well organised I switched to the guardian.
+___
+**Prompt>** Please use The Guardian instead of BBC News. Please remove links and hashtags from the headlines before putting into headlines.md. Please also ask open air summarise the text in the style of a news report. Also extract a link to a relevant photo from the website, they are in a <source> tag within a <picture> tag, to include with the paragraph text. Also the openai key is provided as an environment variable. Also use text-davinci-003 not text-davinci-002.
+___
+**GPT>** Here's an updated version of the script that fetches the latest tweets from The Guardian, removes links and hashtags from the headlines, asks OpenAI to summarize the text in the style of a news report, extracts a relevant photo URL, and uses the text-davinci-003 engine. The OpenAI API key is now read from an environment variable:
+
+```python
+import os
+import snscrape.modules.twitter as sntwitter
+import requests
+from bs4 import BeautifulSoup
+import openai
+import re
+
+# Set up OpenAI API Key
+openai.api_key = os.environ["OPENAI_API_KEY"]
+
+# Function to get the latest headlines from The Guardian
+def get_latest_headlines(user, num_headlines):
+    headlines = []
+    for i, tweet in enumerate(sntwitter.TwitterUserScraper(user).get_items()):
+        if i >= num_headlines:
+            break
+        content = re.sub(r"(https?://\S+|#\S+)", "", tweet.rawContent).strip()
+        headlines.append((content, tweet.tcooutlinks[0] if tweet.tcooutlinks else None))
+    return headlines
+
+# Function to extract the first 1000 characters of paragraph text and a relevant photo URL from a URL
+def extract_text_and_photo(url):
+    if not url:
+        return None, None
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, 'html.parser')
+
+    paragraphs = soup.find_all('p')
+    text = ' '.join([p.get_text() for p in paragraphs])[:1000]
+
+    picture_tag = soup.find('picture')
+    if picture_tag:
+        source_tag = picture_tag.find('source')
+        if source_tag:
+            photo_url = source_tag.get('srcset')
+        else:
+            photo_url = None
+    else:
+        photo_url = None
+
+    return text, photo_url
+
+# Function to summarize text in the style of a news report using OpenAI
+def summarize_text(text):
+    if not text:
+        return None
+    response = openai.Completion.create(
+        engine="text-davinci-003",
+        prompt=f"Please summarize the following text in the style of a news report:\n{text}\n",
+        max_tokens=50,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+
+    summary = response.choices[0].text.strip()
+    return summary
+
+# Fetch the headlines
+num_headlines = 10
+guardian_headlines = get_latest_headlines('guardian', num_headlines)
+
+# Process the headlines and save to a file
+with open('headlines.md', 'w') as f:
+    for i, (headline, url) in enumerate(guardian_headlines):
+        text, photo_url = extract_text_and_photo(url)
+        summary = summarize_text(text)
+        f.write(f"### {i + 1}. {headline}\n\n")
+        if summary:
+            f.write(f"{summary}\n\n")
+            if photo_url:
+                f.write(f"![Image]({photo_url})\n\n")
+        else:
+            f.write("No summary available.\n\n")
+
+print("Headlines and summaries saved to 'headlines.md'")
+
+```
+
+Make sure to set the OPENAI_API_KEY environment variable to your actual OpenAI API key before running the script:
+```bash
+export OPENAI_API_KEY=your_openai_api_key
+```
+
+This script will fetch the latest tweets from The Guardian, extract the text and a relevant photo URL from the linked web pages, send the text to OpenAI for summarization in the style of a news report, and save the headlines, summaries, and photo URLs to a file named "headlines.md".
+
+### In Summary
+
+Hopefully this example shows a typical to and fro with a language model. You can run the [Simple Headlines](scrape/app_simple.py) or the [Headlines With Summary](scrape/app_with_summary.py) yourself or just see the result [here](scrape/headlines.md). Don't forget you'll need an OPEN AI key.
+
+```bash
+export OPENAI_API_KEY=your_openai_api_key
+```
