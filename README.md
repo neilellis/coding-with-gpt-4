@@ -283,6 +283,8 @@ at [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/), [A
 and [Dolly](https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html) to get
 started.
 
+Also [Gtp4All](https://github.com/nomic-ai/gpt4all) , [Cerebas-GPT](https://www.cerebras.net/blog/cerebras-gpt-a-family-of-open-compute-efficient-large-language-models/).
+
 Then move on to [LangChain](https://github.com/hwchase17/langchain)
 and [it's ecosystem](https://github.com/kyrolabs/awesome-langchain).
 
