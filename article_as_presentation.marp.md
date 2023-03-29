@@ -29,7 +29,7 @@ So who am I, well I'm a software developer who has worked in the banking sector 
 
 ---
 
-### A brief history of AI in software development
+### The 'WWW' or 'iPhone Moment'
 
 AI has been around for quite some time, but with the advent of GPT-4, we're experiencing a "WWW moment" – a critical turning point that's transforming AI from a niche field to a widespread technological revolution.
 
