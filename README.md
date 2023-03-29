@@ -6,8 +6,8 @@ learning render information outdated almost as soon as it's disseminated. This i
 large language models (LLMs) like GPT-4. If you want to follow developments from a coding perspective I'd recommend you
 visit [Hacker News](https://news.ycombinator.com/news).
 
-If you prefer an academic style of writing check out this article as an [academic paper](article_as_paper.md), or as
-a [talk](article_as_talk.md) (courtesy of GPT-4 of course!)
+If you prefer an academic style of writing check out this article as an [academic paper](article_as_paper.md), 
+a [talk](article_as_talk.md) (courtesy of GPT-4 of course!) or as a full presentation [PPT](article_as_presentation.marp.pptx)/[HTML](article_as_presentation.marp.html)
 
 <!-- TOC -->
 

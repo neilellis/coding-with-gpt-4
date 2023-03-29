@@ -1,12 +1,14 @@
 
-AI> **_What would you like me to do?_**
+**AI**> **_What would you like me to do?_**
 
-User> `Write python code to download 10 tweets about floods using the Twitter v2 API and tweepy.`
+**User**> `Write python code to download 10 tweets about floods using the Twitter v2 API and tweepy.`
 
 **Observation**: Write python code to download 10 tweets about floods using the Twitter v2 API and tweepy.
-Thought:I can use the `requests_get` tool to make a GET request to the Twitter API and tweepy library to authenticate
+
+**Thought**:I can use the `requests_get` tool to make a GET request to the Twitter API and tweepy library to authenticate
 the request.
-Action:
+
+**Action**:
 
 ```
 {
@@ -16,8 +18,10 @@ Action:
 ```
 
 **Observation**: module 'tweepy' has no attribute 'OAuth2BearerToken'
+
 **Thought**:I need to use the correct method to authenticate with the Twitter API using tweepy. I will use the `Bearer`
 method instead.
+
 **Action**:
 
 ```
@@ -28,8 +32,10 @@ method instead.
 ```
 
 **Observation**: Expected token_type to equal "bearer", but got None instead
+
 **Thought**:There seems to be an issue with the authentication. I will check the API keys and try again.
-Action:
+
+**Action**:
 
 ```
 {
@@ -38,14 +44,16 @@ Action:
 }
 ```
 
-AI> `Can you please provide me with the correct API key and secret key for the Twitter API?`
+**AI**> *Can you please provide me with the correct API key and secret key for the Twitter API?*
 
-User>`Use bearer token instead`
+**User**>`Use bearer token instead`
 
 **Observation**: Use bearer token instead
+
 **Thought**:The human provided me with a bearer token instead of API keys. I will modify the authentication code to use
 the bearer token instead.
-Action:
+
+**Action**:
 
 ```
 {
@@ -55,8 +63,10 @@ Action:
 ```
 
 **Observation**: Expected token_type to equal "bearer", but got None instead
+
 **Thought**:There still seems to be an issue with the authentication. I will check the bearer token and try again.
-Action:
+
+**Action**:
 
 ```
 {
@@ -65,14 +75,16 @@ Action:
 }
 ```
 
-AI> `Can you please confirm that the bearer token is correct?`
+**AI**> `Can you please confirm that the bearer token is correct?`
 
-User> `<twitter-bearer-token redacted>`
+**User**> `<twitter-bearer-token redacted>`
 
 **Observation**: <twitter-bearer-token redacted>
+
 **Thought**:It seems like the bearer token provided has some special characters that need to be properly encoded. I will
 modify the authentication code to include the encoded bearer token.
-Action:
+
+**Action**:
 
 ```
 {

@@ -1,10 +1,16 @@
 Hey everyone! I'm very glad to share my experiences with you today, diving into the world of coding with AI,
-specifically focusing on
-ChatGPT, GPT-4, and large language models. We'll explore their potential in the realm of software development and how
+specifically focusing on ChatGPT, GPT-4, and large language models. We'll explore their potential in the realm of software development and how
 they're changing the way we write code.
 
 Everything I'm talking about today is available on GitHub https://github.com/neilellis/coding-with-gpt-4, this talk is a
 summary of the main article in the repo. It was edited for brevity mostly by GPT-4 of course.
+
+### Who Am I?
+
+I'm a software developer who has worked in the banking sector and for several startups. I've been a professional
+developer for about 20 years and coding for the last 40 years. I'm a generalist, full-stack engineer from a
+predominantly C, C++, Java, Typescript and Objective-C background. Currently I'm being taught Python by GPT-4.
+
 
 ### A brief history of AI in software development
 
@@ -18,7 +24,7 @@ fundamental aspect of modern life, AI is poised to follow a similar trajectory.
 
 ### The impact of AI on software development
 
-As a software developer with 20 years of industry experience, I've seen firsthand how AI can be both amazing and
+As a software developer I've seen firsthand how AI can be both amazing and
 frustrating. GPT-4, for instance, can generate good to great code, especially in areas where I'm less familiar. However,
 it still makes too many mistakes and changes its mind too much, making it unsuitable for use without human supervision.
 
@@ -66,9 +72,8 @@ As AI continues to advance, we can expect even greater integration with software
 developments include:
 
 1. **Improved models**: As AI models like GPT-4 continue to evolve, we can anticipate better performance, increased
-   accuracy, and fewer mistakes. The more developers use and interact with these models, the more they'll improve.
-2. **Larger context**: With a large or unbounded context the AI will be able to comprehend the relationship between more
-   parts of your code base.
+   accuracy, and fewer mistakes.  With a large or unbounded context the AI will be able to comprehend the relationship between more
+   parts of your code base. The more developers use and interact with these models, the more they'll improve.
 2. **AI-assisted debugging**: AI could both statically and dynamically analyze code for common bugs or performance
    issues and suggest solutions, streamlining the debugging process.
 3. **AI-driven project management**: AI models could help manage software projects by predicting timelines, identifying
@@ -77,6 +82,11 @@ developments include:
    before they become critical issues.
 5. **AI and low-code/no-code platforms**: The gold standard, AI may eventually empower non-developers to create custom
    applications by generating code based on natural language instructions, democratizing software development.
+
+### The Future Today
+
+Using LangChain and ReAct gives us a glimpse into the future.
+
 
 ### Final thoughts
 
