@@ -432,7 +432,7 @@ ___
 ___
 > Let's skip this code for now, it worked, but I now wanted to tweak the code to get exactly what I wanted, and since the BBC News feed wasn't well organised I switched to the guardian.
 ___
-**Prompt>** Please use The Guardian instead of BBC News. Please remove links and hashtags from the headlines before putting into headlines.md. Please also ask open air summarise the text in the style of a news report. Also extract a link to a relevant photo from the website, they are in a <source> tag within a <picture> tag, to include with the paragraph text. Also the openai key is provided as an environment variable. Also use text-davinci-003 not text-davinci-002.
+**Prompt>** Please use The Guardian instead of BBC News. Please remove links and hashtags from the headlines before putting into headlines.md. Please also ask open ai to summarise the text in the style of a news report. Also extract a link to a relevant photo from the website, they are in a <source> tag within a <picture> tag, to include with the paragraph text. Also the openai key is provided as an environment variable. Also use text-davinci-003 not text-davinci-002.
 ___
 **GPT>** Here's an updated version of the script that fetches the latest tweets from The Guardian, removes links and hashtags from the headlines, asks OpenAI to summarize the text in the style of a news report, extracts a relevant photo URL, and uses the text-davinci-003 engine. The OpenAI API key is now read from an environment variable:
 
