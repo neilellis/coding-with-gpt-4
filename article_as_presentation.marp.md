@@ -7,7 +7,7 @@ _class: lead
 
 # AI in Software Development
 
-Hey everyone! I'm very glad to share my experiences with you today, diving into the world of AI, specifically focusing on ChatGPT, GPT-4, and large language models. Everything I'm talking about today is available on GitHub https://github.com/neilellis/coding-with-gpt-4, this talk is a summary of the main article in the repo.
+Hey everyone, my name is Neil Ellis! I'm glad to share my experiences with you today, diving into the world of AI, specifically focusing on ChatGPT, GPT-4, and large language models. Everything I'm talking about today is available on GitHub https://github.com/neilellis/coding-with-gpt-4, this talk is a summary of the main article in the repo.
 
 <!-- Hey everyone! I'm very glad to share my experiences with you today, diving into the world of coding with AI,
 specifically focusing on ChatGPT, GPT-4, and large language models. We'll explore their potential in the realm of software development and how
@@ -157,7 +157,7 @@ developments include:
 -->
 --- 
 
-## An Example
+## An example
 
 The following is an example of using GPT-4 to write some code, without any user editing. This is only really possible on relatively trivial code, if nothing else it shows what the near future could, and undoubtedly will, look like.
 
@@ -213,12 +213,12 @@ print("Headlines saved to 'headlines.md'")
 ```
 
 <!-- 
-And yes this does exactly as expected, producing a simple list of headlines in the markdown file.
+    ChatGPT returns me the complete Python script I need, as you can see. The full script, not shown here, performs exactly as expected, producing a simple list of headlines in the markdown file.
 -->
 
 ---
 
-### Iterate on the Design
+### Iterate on the design
 
 So now let's improve on this and get a summary and a photo for each headline. 
 
@@ -289,12 +289,12 @@ GPT apologises and gives the new code. I realise I want to make a few tweaks tho
 
 ___
 
-### New Requirements
+### New requirements
 
 **Prompt>** Please use The Guardian instead of BBC News. Please remove links and hashtags from the headlines before putting into headlines.md. Please also ask open ai to summarise the text in the style of a news report. Also extract a link to a relevant photo from the website, they are in a <source> tag within a <picture> tag, to include with the paragraph text. Also the openai key is provided as an environment variable. Also use text-davinci-003 not text-davinci-002.
 
 <!-- 
-I now update my requirements to use the Guardian not BBC News website, clean up the headlines and include both an image and a summary in the style of a news report.
+    Don't try and read the whole prompt here. Basically I now update my requirements to use the Guardian not BBC News website, clean up the headlines and include both an image and a summary in the style of a news report. 
 -->
 ___
 
@@ -356,7 +356,7 @@ And indeed the headlines.md file looks like this ...
 
 ---
 
-### The Future Today
+### The future, today
 
 Let's take a look at what the (fairly near) future might look.
 
@@ -477,7 +477,7 @@ But I want to use a bearer token instead, so I tell it. It adjusts the code, but
 }
 ```
 <!--
-After getting an error it asks me if has a valid bearer token.
+ It gets an error, and to solve the problem it decides to ask me if the bearer token is valid.
 -->
 ---
 
@@ -500,7 +500,7 @@ After getting an error it asks me if has a valid bearer token.
 
 <!-- 
 
-I reply with a valid bearer token, which it correctly understands as being one, notices some characters need to be escaped and uses it.
+I then reply with a valid bearer token, which it correctly understands as being one, notices some characters need to be escaped and uses it.
 
 -->
 
