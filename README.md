@@ -6,9 +6,12 @@ learning render information outdated almost as soon as it's disseminated. This i
 large language models (LLMs) like GPT-4. If you want to follow developments from a coding perspective I'd recommend you
 visit [Hacker News](https://news.ycombinator.com/news).
 
+If you prefer an academic style of writing check out this article as an [academic paper](article_as_paper.md). Or as a [talk](article_as_talk.md) (courtesy of GPT-4 of course!) 
+
 <!-- TOC -->
 * [GPT-4 the Current and Future State of AI-Powered Code Writing](#gpt-4-the-current-and-future-state-of-ai-powered-code-writing)
   * [Before Reading This](#before-reading-this)
+  * [The Author](#the-author)
   * [Where We Are From a Developer's Perspective](#where-we-are-from-a-developers-perspective)
   * [What it's Like Coding with GPT-4](#what-its-like-coding-with-gpt-4)
   * [What It Can Do](#what-it-can-do)
@@ -32,19 +35,27 @@ visit [Hacker News](https://news.ycombinator.com/news).
     * [Get Some News Headlines](#get-some-news-headlines)
     * [Better Headlines with Summary](#better-headlines-with-summary)
     * [In Summary](#in-summary)
+  * [References](#references)
 <!-- TOC -->
-
 
 ## Before Reading This
 
 I'm going to assume your head has not been in the sand in the last few months, so you'll know a bit about ChatGPT, GPT-4
-and LLMs. But I would urge you to try out ChatGPT-4 on [ChatGPT Plus](https://openai.com/blog/chatgpt-plus) if you can
+and LLMs. But I would urge you to try out GPT-4 on [ChatGPT Plus](https://openai.com/blog/chatgpt-plus) if you can
 as it is considerably more advanced than the original GPT-3.5.
 
 I'd also recommend you read up
 on [GPT-4 plugins](https://openai.com/blog/GPT-4-plugins), [GitHub Copilot](https://github.com/features/copilot/)
 and [GitHub Copilot X](https://github.com/features/preview/copilot-x) for extra credit read up
 on [Langchain](https://github.com/hwchase17/langchain).
+
+## The Author
+
+I'm a software developer who has worked in the banking sector and for several startups. I've been a professional
+developer for about 20 years and coding for the last 40 years. I'm a generalist, full-stack engineer from a
+predominantly C, C++, Java, Typescript and Objective-C background. Currently I'm learning Python and attempting to get
+to grips with all things AI. The fact that all the code examples are in Python a language I barely know, should tell you
+all you need to know about the future of coding.
 
 ## Where We Are From a Developer's Perspective
 
@@ -92,7 +103,8 @@ let's look at what it can do for you.
 
 So as I've hopefully established it ain't taking programmers jobs just yet that's for sure. At best, it's a great
 sidekick (or as Microsoft like to say Copilot) to help you brainstorm code and to sketch out the basics. However, it's
-trajectory has been set and all the evidence points to a rapidly evolving and improving technology.
+trajectory has been set and all the evidence points to a rapidly evolving and improving technology. Skip forward
+to [the example](#an-example) at the end if you want to see a full interaction.
 
 Right now you can use it for:
 
@@ -112,13 +124,14 @@ Right now you can use it for:
 
 ## What It Can't Do
 
-Now let's look at the limitations and how they are being overcome or could be overcome.
+Now let's look at the limitations and how they are being overcome or could be overcome. If you want to see a full
+interaction go wrong see my [bad example](bad_example.md).
 
 ### Know the latest Libraries, APIs and Languages
 
 The changing nature of libraries and the cost/time of training models means that tools like GPT-4 at present are always
 out of date. This can be tiresome and frustrating when GPT-4 is constantly suggesting out of date solutions such as
-believing that a library doesn't support the latest Twitter API. I've included a script [Bad Example](bad_example.md) of
+believing that a library doesn't support the latest Twitter API. I've included a [bad example](bad_example.md) of
 the torture of its ignorance.
 
 This problem is likely to be at least partially solved by the use
@@ -282,7 +295,6 @@ This changes on a daily basis, but you should look
 at [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/), [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html)
 and [Dolly](https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html) to get
 started.
-
 Also [Gtp4All](https://github.com/nomic-ai/gpt4all) , [Cerebas-GPT](https://www.cerebras.net/blog/cerebras-gpt-a-family-of-open-compute-efficient-large-language-models/).
 
 Then move on to [LangChain](https://github.com/hwchase17/langchain)
@@ -290,18 +302,23 @@ and [it's ecosystem](https://github.com/kyrolabs/awesome-langchain).
 
 ## An Example
 
-The following is an example of using GPT-4 to write some code, without any user editing. This is only really possible on relatively trivial code, if nothing else it shows what the near future could look like.
+The following is an example of using GPT-4 to write some code, without any user editing. This is only really possible on
+relatively trivial code, if nothing else it shows what the near future could, and undoubtedly will, look like.
 
 ### Get Some News Headlines
 
 **Prompt>** Get the latest headlines from BBC News using snscrape python library and put the results in headlines.md
 ___
-**GPT>** As an AI language model, I cannot directly execute code or access real-time data from the internet. However, I can help you write a Python script that uses the snscrape library to fetch the latest headlines from BBC News and save them to a file called "headlines.md".
+**GPT>** As an AI language model, I cannot directly execute code or access real-time data from the internet. However, I
+can help you write a Python script that uses the snscrape library to fetch the latest headlines from BBC News and save
+them to a file called "headlines.md".
 
 First, make sure you have the snscrape library installed:
+
 ```bash
 pip install snscrape
 ```
+
 Then, you can create a Python script using the following code:
 
 ```python
@@ -319,6 +336,7 @@ def get_latest_headlines(user, num_headlines):
         headlines.append(tweet.content)
     return headlines
 
+
 # Fetch the headlines
 num_headlines = 10
 bbc_headlines = get_latest_headlines('BBCNews', num_headlines)
@@ -331,9 +349,12 @@ with open('headlines.md', 'w') as f:
 print("Headlines saved to 'headlines.md'")
 
 ```
-This script will fetch the 10 latest tweets from the BBC News Twitter account and save them to a file named "headlines.md". If you want to fetch more or fewer headlines, change the num_headlines variable accordingly.
 
-Please note that this script will fetch the latest tweets from the BBC News Twitter account, which may or may not be actual headlines.
+This script will fetch the 10 latest tweets from the BBC News Twitter account and save them to a file named "
+headlines.md". If you want to fetch more or fewer headlines, change the num_headlines variable accordingly.
+
+Please note that this script will fetch the latest tweets from the BBC News Twitter account, which may or may not be
+actual headlines.
 
 
 > And yes this does exactly as expected. You can run this yourself.
@@ -343,9 +364,14 @@ Please note that this script will fetch the latest tweets from the BBC News Twit
 So now let's improve on this and get a summary and a photo for each headline. This helps to show the iterative process.
 
 ___
-**Prompt>** Now alter the code so that it fetches the web page from the link in the Tweet, takes the first 1000 characters of paragraph text and sends them to openai to summarise. Now put the headlines and the summarised text in the markdown file headlines.md in markdown format.
+**Prompt>** Now alter the code so that it fetches the web page from the link in the Tweet, takes the first 1000
+characters of paragraph text and sends them to openai to summarise. Now put the headlines and the summarised text in the
+markdown file headlines.md in markdown format.
 ___
-**GPT>** As an AI language model, I cannot directly execute code or access real-time data from the internet. However, I can help you write a Python script that fetches the web page from the link in the tweet, extracts the first 1000 characters of paragraph text, sends them to OpenAI for summarization, and saves the headlines and summarized text in a Markdown file called "headlines.md".
+**GPT>** As an AI language model, I cannot directly execute code or access real-time data from the internet. However, I
+can help you write a Python script that fetches the web page from the link in the tweet, extracts the first 1000
+characters of paragraph text, sends them to OpenAI for summarization, and saves the headlines and summarized text in a
+Markdown file called "headlines.md".
 
 First, make sure you have the required libraries installed:
 
@@ -363,6 +389,7 @@ import re
 # Set up OpenAI API Key
 openai.api_key = "<your_openai_api_key>"
 
+
 # Function to get the latest headlines from BBC News
 def get_latest_headlines(user, num_headlines):
     headlines = []
@@ -371,6 +398,7 @@ def get_latest_headlines(user, num_headlines):
             break
         headlines.append((tweet.content, tweet.urls[0] if tweet.urls else None))
     return headlines
+
 
 # Function to extract the first 1000 characters of paragraph text from a URL
 def extract_text(url):
@@ -381,6 +409,7 @@ def extract_text(url):
     paragraphs = soup.find_all('p')
     text = ' '.join([p.get_text() for p in paragraphs])
     return text[:1000]
+
 
 # Function to summarize text using OpenAI
 def summarize_text(text):
@@ -397,6 +426,7 @@ def summarize_text(text):
 
     summary = response.choices[0].text.strip()
     return summary
+
 
 # Fetch the headlines
 num_headlines = 10
@@ -420,23 +450,33 @@ print("Headlines and summaries saved to 'headlines.md'")
 > Running this will generate an error, so I pass the error back to GPT with no other comments
 
 ___
-**Prompt>** 
-/Users/neil/IdeaProjects/coding-with-gpt-4/scrape/app_with_summary.py:16: DeprecatedFeatureWarning: content is deprecated, use rawContent instead
-  headlines.append((tweet.content, tweet.urls[0] if tweet.urls else None))
+**Prompt>**
+/Users/neil/IdeaProjects/coding-with-gpt-4/scrape/app_with_summary.py:16: DeprecatedFeatureWarning: content is
+deprecated, use rawContent instead
+headlines.append((tweet.content, tweet.urls[0] if tweet.urls else None))
 Traceback (most recent call last):
-  File "/Users/neil/IdeaProjects/coding-with-gpt-4/scrape/app_with_summary.py", line 47, in <module>
-    bbc_headlines = get_latest_headlines('BBCNews', num_headlines)
-  File "/Users/neil/IdeaProjects/coding-with-gpt-4/scrape/app_with_summary.py", line 16, in get_latest_headlines
-    headlines.append((tweet.content, tweet.urls[0] if tweet.urls else None))
+File "/Users/neil/IdeaProjects/coding-with-gpt-4/scrape/app_with_summary.py", line 47, in <module>
+bbc_headlines = get_latest_headlines('BBCNews', num_headlines)
+File "/Users/neil/IdeaProjects/coding-with-gpt-4/scrape/app_with_summary.py", line 16, in get_latest_headlines
+headlines.append((tweet.content, tweet.urls[0] if tweet.urls else None))
 AttributeError: 'Tweet' object has no attribute 'urls'
 ___
-**GPT>** I apologize for the oversight. It seems that the 'urls' attribute is not directly available in the 'Tweet' object in snscrape. Instead, you can use the 'tcooutlinks' attribute to get the URLs. Also, I'll replace the deprecated 'content' attribute with 'rawContent'. Here's the updated code:
+**GPT>** I apologize for the oversight. It seems that the 'urls' attribute is not directly available in the 'Tweet'
+object in snscrape. Instead, you can use the 'tcooutlinks' attribute to get the URLs. Also, I'll replace the
+deprecated 'content' attribute with 'rawContent'. Here's the updated code:
 ___
-> Let's skip this code for now, it worked, but I now wanted to tweak the code to get exactly what I wanted, and since the BBC News feed wasn't well organised I switched to the guardian.
+> Let's skip this code for now, it worked, but I now wanted to tweak the code to get exactly what I wanted, and since
+> the BBC News feed wasn't well organised I switched to the guardian.
 ___
-**Prompt>** Please use The Guardian instead of BBC News. Please remove links and hashtags from the headlines before putting into headlines.md. Please also ask open ai to summarise the text in the style of a news report. Also extract a link to a relevant photo from the website, they are in a <source> tag within a <picture> tag, to include with the paragraph text. Also the openai key is provided as an environment variable. Also use text-davinci-003 not text-davinci-002.
+**Prompt>** Please use The Guardian instead of BBC News. Please remove links and hashtags from the headlines before
+putting into headlines.md. Please also ask open ai to summarise the text in the style of a news report. Also extract a
+link to a relevant photo from the website, they are in a <source> tag within a <picture> tag, to include with the
+paragraph text. Also the openai key is provided as an environment variable. Also use text-davinci-003 not
+text-davinci-002.
 ___
-**GPT>** Here's an updated version of the script that fetches the latest tweets from The Guardian, removes links and hashtags from the headlines, asks OpenAI to summarize the text in the style of a news report, extracts a relevant photo URL, and uses the text-davinci-003 engine. The OpenAI API key is now read from an environment variable:
+**GPT>** Here's an updated version of the script that fetches the latest tweets from The Guardian, removes links and
+hashtags from the headlines, asks OpenAI to summarize the text in the style of a news report, extracts a relevant photo
+URL, and uses the text-davinci-003 engine. The OpenAI API key is now read from an environment variable:
 
 ```python
 import os
@@ -449,6 +489,7 @@ import re
 # Set up OpenAI API Key
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
+
 # Function to get the latest headlines from The Guardian
 def get_latest_headlines(user, num_headlines):
     headlines = []
@@ -458,6 +499,7 @@ def get_latest_headlines(user, num_headlines):
         content = re.sub(r"(https?://\S+|#\S+)", "", tweet.rawContent).strip()
         headlines.append((content, tweet.tcooutlinks[0] if tweet.tcooutlinks else None))
     return headlines
+
 
 # Function to extract the first 1000 characters of paragraph text and a relevant photo URL from a URL
 def extract_text_and_photo(url):
@@ -481,6 +523,7 @@ def extract_text_and_photo(url):
 
     return text, photo_url
 
+
 # Function to summarize text in the style of a news report using OpenAI
 def summarize_text(text):
     if not text:
@@ -496,6 +539,7 @@ def summarize_text(text):
 
     summary = response.choices[0].text.strip()
     return summary
+
 
 # Fetch the headlines
 num_headlines = 10
@@ -519,16 +563,49 @@ print("Headlines and summaries saved to 'headlines.md'")
 ```
 
 Make sure to set the OPENAI_API_KEY environment variable to your actual OpenAI API key before running the script:
+
 ```bash
 export OPENAI_API_KEY=your_openai_api_key
 ```
 
-This script will fetch the latest tweets from The Guardian, extract the text and a relevant photo URL from the linked web pages, send the text to OpenAI for summarization in the style of a news report, and save the headlines, summaries, and photo URLs to a file named "headlines.md".
+This script will fetch the latest tweets from The Guardian, extract the text and a relevant photo URL from the linked
+web pages, send the text to OpenAI for summarization in the style of a news report, and save the headlines, summaries,
+and photo URLs to a file named "headlines.md".
 
 ### In Summary
 
-Hopefully this example shows a typical to and fro with a language model. You can run the [Simple Headlines](scrape/app_simple.py) or the [Headlines With Summary](scrape/app_with_summary.py) yourself or just see the result [here](scrape/headlines.md). Don't forget you'll need an OPEN AI key.
+Hopefully this example shows a typical to and fro with a language model. You can run
+the [Simple Headlines](scrape/app_simple.py) or the [Headlines With Summary](scrape/app_with_summary.py) yourself or
+just see the result [here](scrape/headlines.md). Don't forget you'll need an OPEN AI key.
 
 ```bash
 export OPENAI_API_KEY=your_openai_api_key
 ```
+
+## References
+
+Chase, Harrison. LangChain. 2022. Oct. 2022. GitHub, https://github.com/hwchase17/langchain.
+
+‘GitHub - Microsoft/LoRA: Code for Loralib, an Implementation of “LoRA: Low-Rank Adaptation of Large Language Models”’. GitHub, https://github.com/microsoft/LoRA. Accessed 29 Mar. 2023.
+
+‘GitHub Copilot · Your AI Pair Programmer’. GitHub, https://github.com/features/copilot/. Accessed 29 Mar. 2023.
+
+‘Hello Dolly: Democratizing the Magic of ChatGPT with Open Models’. Databricks, 24 Mar. 2023, https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html.
+
+‘---’. Databricks, 24 Mar. 2023, https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html.
+
+Introducing ChatGPT Plus. https://openai.com/blog/chatgpt-plus. Accessed 29 Mar. 2023.
+
+‘Introducing GitHub Copilot X’. GitHub, https://github.com/features/preview/copilot-x. Accessed 29 Mar. 2023.
+
+Log in or Sign up to View. https://ai.facebook.com/blog/large-language-model-llama-meta-ai/. Accessed 29 Mar. 2023.
+
+Stanford CRFM. https://crfm.stanford.edu/2023/03/13/alpaca.html. Accessed 29 Mar. 2023.
+
+WWW-Talk Jan-Mar 1993: Proposed New Tag: IMG. http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html. Accessed 29 Mar. 2023.
+
+---. http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html. Accessed 29 Mar. 2023.
+
+Yao, Shunyu, et al. ReAct: Synergizing Reasoning and Acting in Language Models. arXiv, 9 Mar. 2023. arXiv.org, http://arxiv.org/abs/2210.03629.
+
+---. ReAct: Synergizing Reasoning and Acting in Language Models. arXiv, 9 Mar. 2023. arXiv.org, https://doi.org/10.48550/arXiv.2210.03629.
