@@ -6,10 +6,11 @@ _class: lead
 ---
 
 # AI in Software Development
+## Neil Ellis
 
-Hey everyone, my name is Neil Ellis! I'm glad to share my experiences with you today, diving into the world of AI, specifically focusing on ChatGPT, GPT-4, and large language models. Everything I'm talking about today is available on GitHub https://github.com/neilellis/coding-with-gpt-4, this talk is a summary of the main article in the repo.
+https://github.com/neilellis/coding-with-gpt-4, 
 
-<!-- Hey everyone! I'm very glad to share my experiences with you today, diving into the world of coding with AI,
+<!-- Hey everyone, my name is Neil Ellis! I'm very glad to share my experiences with you today, diving into the world of coding with AI,
 specifically focusing on ChatGPT, GPT-4, and large language models. We'll explore their potential in the realm of software development and how
 they're changing the way we write code.
 
@@ -23,7 +24,7 @@ summary of the main article in the repo. It was edited for brevity mostly by GPT
 I'm a software developer who has worked in the banking sector and for several startups. I've been a professional developer for about 20 years.
 
 <!--
-I'm a software developer who has worked in the banking sector and for several startups. I've been a professional developer for about 20 years and coding for the last 40 years. I'm a generalist, full-stack engineer from a predominantly C, C++, Java, Typescript and Objective-C background. Currently I'm being taught Python by GPT-4.
+So who am I, well I'm a software developer who has worked in the banking sector and for several startups. I've been a professional developer for about 20 years and coding for the last 40 years. I'm a generalist, full-stack engineer from a predominantly C, C++, Java and Typescript  background. Currently I'm being taught Python by GPT-4.
 -->
 
 ---
@@ -43,6 +44,7 @@ The rapid advancement of AI has generated tremendous excitement, and while its i
 novelty, AI's potential for utility is undoubtedly vast. Just as the Internet evolved over time from a toy to become a
 fundamental aspect of modern life, AI is poised to follow a similar trajectory.
 -->
+
 ---
 
 ### The impact of AI on software development
@@ -52,7 +54,7 @@ As a software developer I've seen firsthand how AI can be both amazing and frust
 <!--
 As a software developer I've seen firsthand how AI can be both amazing and
 frustrating. GPT-4, for instance, can generate good to great code, especially in areas where I'm less familiar. However,
-it still makes too many mistakes and changes its mind too much, making it unsuitable for use without human supervision.
+it still makes too many mistakes and changes its mind too much, making it unsuitable for complex use case and for use without human supervision.
 -->
 
 ---
@@ -117,14 +119,16 @@ When using AI to write code, consider the following best practices:
 
 <!--
 
+When using AI to write code, consider the following best practices:
+
 1. **Start simple**: Begin with a basic code snippet to gauge the AI's capabilities and limitations before building on
    it.
 2. **Be specific**: Provide clear and precise instructions to the AI to minimize miscommunication and incorrect
    assumptions.
 3. **Be patient**: Expect occasional slow response times and minor issues while using AI tools in their early stages.
 4. **Iterate**: Refine the AI-generated code to improve its quality and functionality progressively.
-5. **Leverage context**: Take advantage of the AI's working memory to maintain a holistic understanding of the code,
-   leading to smarter results. The less it has to remember the better job it tends to do.
+5. **Leverage context**: Try not to exceed the AI's working memory to help it better understand all parts of the code,
+   leading to smarter results.
 
 -->
 ---
@@ -155,6 +159,7 @@ developments include:
 5. **AI and low-code/no-code platforms**: The gold standard, AI may eventually empower non-developers to create custom
    appl
 -->
+
 --- 
 
 ## An example
@@ -289,7 +294,7 @@ GPT apologises and gives the new code. I realise I want to make a few tweaks tho
 
 ___
 
-### New requirements
+### Add some new requirements
 
 **Prompt>** Please use The Guardian instead of BBC News. Please remove links and hashtags from the headlines before putting into headlines.md. Please also ask open ai to summarise the text in the style of a news report. Also extract a link to a relevant photo from the website, they are in a <source> tag within a <picture> tag, to include with the paragraph text. Also the openai key is provided as an environment variable. Also use text-davinci-003 not text-davinci-002.
 
@@ -356,7 +361,7 @@ And indeed the headlines.md file looks like this ...
 
 ---
 
-### The future, today
+### The future, today!
 
 Let's take a look at what the (fairly near) future might look.
 
@@ -530,8 +535,6 @@ I then reply with a valid bearer token, which it correctly understands as being 
 ```
 <!-- 
 And now we have the correct result, just as we asked.
-
-If you want to see some silliness with paperclips there's another example in this repo where I ask the AI to do the one thing we mustn't ask.
 -->
 ---
 
@@ -540,7 +543,7 @@ from langchain.agents import load_tools
 from langchain.agents import initialize_agent
 from langchain.chat_models import ChatOpenAI
 
-
+# RUN WITH EXTREME CAUTION, OR IN DOCKER,  IT HAS ACCESS TO YOUR TERMINAL
 llm = ChatOpenAI(model='gpt-3.5-turbo',temperature=0.5)
 tools = load_tools(['python_repl', 'requests', 'terminal', 'serpapi', 'wikipedia', 
                     'human',  'pal-math', 'pal-colored-objects'], llm=llm)
@@ -553,13 +556,16 @@ agent.run("Ask the human what they want to do")
 ```
 <!--
 The code I used for this is pretty simple with most of the heavy lifting done by LangChain.
+
+If you want to see some silliness with paperclips there's another example in this repo where I ask the AI to do the one thing we mustn't ask.
+
 -->
 
 ---
 
 ### Final thoughts
 
-AI's role in software development is rapidly evolving, and while it may not replace developers entirely, it will undoubtedly redefine the way we write code. By embracing AI's potential and understanding its limitations, we can work alongside these powerful tools to create more efficient, innovative, and secure software solutions.
+AI's role in software development is rapidly evolving. By embracing AI's potential and understanding its limitations, we can work alongside these powerful tools to create more efficient, innovative, and secure software solutions.
 
 <!--
 AI's role in software development is rapidly evolving, and while it may not replace developers entirely, it will
@@ -571,6 +577,7 @@ developers, we should remain curious and open to the possibilities that AI offer
 eye on its output. In the end, our collective expertise will drive AI to become an indispensable tool in the software
 development process.
 -->
+
 ---
 
 ### References

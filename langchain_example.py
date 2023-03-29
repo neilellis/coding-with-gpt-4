@@ -9,7 +9,10 @@
 #
 # $ pip install langchain wikipedia openai google-search-results
 #
-# I'm not a Python programmer so I'm sure there are better ways to do this
+# I'm not a Python programmer, so I'm sure there are better ways to do this
+#
+# RUN WITH EXTREME CAUTION, OR IN DOCKER,  IT HAS ACCESS TO YOUR TERMINAL
+#
 
 from langchain.agents import load_tools
 from langchain.agents import initialize_agent
