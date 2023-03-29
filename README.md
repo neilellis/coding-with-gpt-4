@@ -6,36 +6,39 @@ learning render information outdated almost as soon as it's disseminated. This i
 large language models (LLMs) like GPT-4. If you want to follow developments from a coding perspective I'd recommend you
 visit [Hacker News](https://news.ycombinator.com/news).
 
-If you prefer an academic style of writing check out this article as an [academic paper](article_as_paper.md). Or as a [talk](article_as_talk.md) (courtesy of GPT-4 of course!) 
+If you prefer an academic style of writing check out this article as an [academic paper](article_as_paper.md), or as
+a [talk](article_as_talk.md) (courtesy of GPT-4 of course!)
 
 <!-- TOC -->
+
 * [GPT-4 the Current and Future State of AI-Powered Code Writing](#gpt-4-the-current-and-future-state-of-ai-powered-code-writing)
-  * [Before Reading This](#before-reading-this)
-  * [The Author](#the-author)
-  * [Where We Are From a Developer's Perspective](#where-we-are-from-a-developers-perspective)
-  * [What it's Like Coding with GPT-4](#what-its-like-coding-with-gpt-4)
-  * [What It Can Do](#what-it-can-do)
-  * [What It Can't Do](#what-it-cant-do)
-    * [Know the latest Libraries, APIs and Languages](#know-the-latest-libraries-apis-and-languages)
-    * [Be Consistent](#be-consistent)
-    * [Be Stable](#be-stable)
-  * [How do you write code using GPT-4?](#how-do-you-write-code-using-gpt-4)
-    * [Write Something, Anything](#write-something-anything)
-    * [Be Specific](#be-specific)
-    * [Be Patient](#be-patient)
-    * [And Iterate](#and-iterate)
-    * [Build on Previous Steps](#build-on-previous-steps)
-    * [Keep it in Context](#keep-it-in-context)
-  * [The Future](#the-future)
-    * [Deeper Tool Integration](#deeper-tool-integration)
-    * [Larger and Larger Contexts (with the goal being infinite)](#larger-and-larger-contexts--with-the-goal-being-infinite-)
-    * [Plugins, Thought Loops and Trial & Error](#plugins-thought-loops-and-trial--error)
-    * [Open Source Alternatives](#open-source-alternatives)
-  * [An Example](#an-example)
-    * [Get Some News Headlines](#get-some-news-headlines)
-    * [Better Headlines with Summary](#better-headlines-with-summary)
-    * [In Summary](#in-summary)
-  * [References](#references)
+    * [Before Reading This](#before-reading-this)
+    * [The Author](#the-author)
+    * [Where We Are From a Developer's Perspective](#where-we-are-from-a-developers-perspective)
+    * [What it's Like Coding with GPT-4](#what-its-like-coding-with-gpt-4)
+    * [What It Can Do](#what-it-can-do)
+    * [What It Can't Do](#what-it-cant-do)
+        * [Know the latest Libraries, APIs and Languages](#know-the-latest-libraries-apis-and-languages)
+        * [Be Consistent](#be-consistent)
+        * [Be Stable](#be-stable)
+    * [How do you write code using GPT-4?](#how-do-you-write-code-using-gpt-4)
+        * [Write Something, Anything](#write-something-anything)
+        * [Be Specific](#be-specific)
+        * [Be Patient](#be-patient)
+        * [And Iterate](#and-iterate)
+        * [Build on Previous Steps](#build-on-previous-steps)
+        * [Keep it in Context](#keep-it-in-context)
+    * [The Future](#the-future)
+        * [Deeper Tool Integration](#deeper-tool-integration)
+        * [Larger and Larger Contexts (with the goal being infinite)](#larger-and-larger-contexts--with-the-goal-being-infinite-)
+        * [Plugins, Thought Loops and Trial & Error](#plugins-thought-loops-and-trial--error)
+        * [Open Source Alternatives](#open-source-alternatives)
+    * [An Example](#an-example)
+        * [Get Some News Headlines](#get-some-news-headlines)
+        * [Better Headlines with Summary](#better-headlines-with-summary)
+        * [In Summary](#in-summary)
+    * [References](#references)
+
 <!-- TOC -->
 
 ## Before Reading This
@@ -225,11 +228,22 @@ operations against those files. Just be aware that the more that can stay in con
 
 ### Deeper Tool Integration
 
+As AI continues to advance, we can expect even greater integration with software development in the areas of:
+
+1. **AI-assisted debugging**: AI could both statically and dynamically analyze code for common bugs or performance
+   issues and suggest solutions, streamlining the debugging process.
+2. **AI-driven project management**: AI models could help manage software projects by predicting timelines, identifying
+   potential bottlenecks, and suggesting resource allocation strategies to optimize development efforts.
+3. **AI-based code security**: AI could analyze code for security vulnerabilities, helping developers spot weaknesses
+   before they become critical issues.
+4. **AI and low-code/no-code platforms**: The gold standard, AI may eventually empower non-developers to create custom
+   applications by generating code based on natural language instructions, democratizing software development.
+
 As AI-powered code writing continues to advance, we can expect deeper integration of tools like GPT-4 with IDEs, code
-editors, and version control systems. This will enable seamless collaboration between the AI model and developers,
+editors, and our version control systems. This will enable seamless collaboration between the AI model and developers,
 making it easier to access AI-generated code suggestions and apply them to the project at hand.
 
-The [GitHub Copilot X](https://github.com/features/preview/copilot-x) is a prime example.
+The [GitHub Copilot X](https://github.com/features/preview/copilot-x) is a prime example of such a tool in development.
 
 ### Larger and Larger Contexts (with the goal being infinite)
 
@@ -586,13 +600,16 @@ export OPENAI_API_KEY=your_openai_api_key
 
 Chase, Harrison. LangChain. 2022. Oct. 2022. GitHub, https://github.com/hwchase17/langchain.
 
-‘GitHub - Microsoft/LoRA: Code for Loralib, an Implementation of “LoRA: Low-Rank Adaptation of Large Language Models”’. GitHub, https://github.com/microsoft/LoRA. Accessed 29 Mar. 2023.
+‘GitHub - Microsoft/LoRA: Code for Loralib, an Implementation of “LoRA: Low-Rank Adaptation of Large Language Models”’.
+GitHub, https://github.com/microsoft/LoRA. Accessed 29 Mar. 2023.
 
 ‘GitHub Copilot · Your AI Pair Programmer’. GitHub, https://github.com/features/copilot/. Accessed 29 Mar. 2023.
 
-‘Hello Dolly: Democratizing the Magic of ChatGPT with Open Models’. Databricks, 24 Mar. 2023, https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html.
+‘Hello Dolly: Democratizing the Magic of ChatGPT with Open Models’. Databricks, 24 Mar.
+2023, https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html.
 
-‘---’. Databricks, 24 Mar. 2023, https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html.
+‘---’. Databricks, 24 Mar.
+2023, https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html.
 
 Introducing ChatGPT Plus. https://openai.com/blog/chatgpt-plus. Accessed 29 Mar. 2023.
 
@@ -602,10 +619,13 @@ Log in or Sign up to View. https://ai.facebook.com/blog/large-language-model-lla
 
 Stanford CRFM. https://crfm.stanford.edu/2023/03/13/alpaca.html. Accessed 29 Mar. 2023.
 
-WWW-Talk Jan-Mar 1993: Proposed New Tag: IMG. http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html. Accessed 29 Mar. 2023.
+WWW-Talk Jan-Mar 1993: Proposed New Tag: IMG. http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html. Accessed
+29 Mar. 2023.
 
 ---. http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html. Accessed 29 Mar. 2023.
 
-Yao, Shunyu, et al. ReAct: Synergizing Reasoning and Acting in Language Models. arXiv, 9 Mar. 2023. arXiv.org, http://arxiv.org/abs/2210.03629.
+Yao, Shunyu, et al. ReAct: Synergizing Reasoning and Acting in Language Models. arXiv, 9 Mar. 2023.
+arXiv.org, http://arxiv.org/abs/2210.03629.
 
----. ReAct: Synergizing Reasoning and Acting in Language Models. arXiv, 9 Mar. 2023. arXiv.org, https://doi.org/10.48550/arXiv.2210.03629.
+---. ReAct: Synergizing Reasoning and Acting in Language Models. arXiv, 9 Mar. 2023.
+arXiv.org, https://doi.org/10.48550/arXiv.2210.03629.
