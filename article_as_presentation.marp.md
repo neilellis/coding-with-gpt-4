@@ -31,7 +31,7 @@ So who am I, well I'm a software developer who has worked in the banking sector 
 
 ### A brief history of AI in software development
 
-AI has been around for quite some time, but with the advent of GPT-4, we're experiencing a "WWW moment" – a critical turning point that's transforming AI from a niche field to a widespread technological revolution. This moment is akin to the introduction of the `<IMG>` tag 30 years ago, which fundamentally changed the World Wide Web.
+AI has been around for quite some time, but with the advent of GPT-4, we're experiencing a "WWW moment" – a critical turning point that's transforming AI from a niche field to a widespread technological revolution.
 
 <!--
 
