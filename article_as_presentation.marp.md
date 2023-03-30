@@ -8,7 +8,7 @@ _class: lead
 # AI in Software Development
 ## Neil Ellis
 
-https://github.com/neilellis/coding-with-gpt-4, 
+https://github.com/neilellis/coding-with-gpt-4
 
 <!-- Hey everyone, my name is Neil Ellis! I'm very glad to share my experiences with you today, diving into the world of coding with AI,
 specifically focusing on ChatGPT, GPT-4, and large language models. We'll explore their potential in the realm of software development and how
