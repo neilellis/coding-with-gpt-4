@@ -10,35 +10,33 @@ If you prefer an academic style of writing check out this article as an [academi
 a [talk](article_as_talk.md) (courtesy of GPT-4 of course!) or as a full presentation [PPT](article_as_presentation.marp.pptx)/[HTML](article_as_presentation.marp.html)
 
 <!-- TOC -->
-
-* [GPT-4 the Current and Future State of AI-Powered Code Writing](#gpt-4-the-current-and-future-state-of-ai-powered-code-writing)
-    * [Before Reading This](#before-reading-this)
-    * [The Author](#the-author)
-    * [Where We Are From a Developer's Perspective](#where-we-are-from-a-developers-perspective)
-    * [What it's Like Coding with GPT-4](#what-its-like-coding-with-gpt-4)
-    * [What It Can Do](#what-it-can-do)
-    * [What It Can't Do](#what-it-cant-do)
-        * [Know the latest Libraries, APIs and Languages](#know-the-latest-libraries-apis-and-languages)
-        * [Be Consistent](#be-consistent)
-        * [Be Stable](#be-stable)
-    * [How do you write code using GPT-4?](#how-do-you-write-code-using-gpt-4)
-        * [Write Something, Anything](#write-something-anything)
-        * [Be Specific](#be-specific)
-        * [Be Patient](#be-patient)
-        * [And Iterate](#and-iterate)
-        * [Build on Previous Steps](#build-on-previous-steps)
-        * [Keep it in Context](#keep-it-in-context)
-    * [The Future](#the-future)
-        * [Deeper Tool Integration](#deeper-tool-integration)
-        * [Larger and Larger Contexts (with the goal being infinite)](#larger-and-larger-contexts--with-the-goal-being-infinite-)
-        * [Plugins, Thought Loops and Trial & Error](#plugins-thought-loops-and-trial--error)
-        * [Open Source Alternatives](#open-source-alternatives)
-    * [An Example](#an-example)
-        * [Get Some News Headlines](#get-some-news-headlines)
-        * [Better Headlines with Summary](#better-headlines-with-summary)
-        * [In Summary](#in-summary)
-    * [References](#references)
-
+* [Coding with GPT-4](#coding-with-gpt-4)
+  * [Before Reading This](#before-reading-this)
+  * [The Author](#the-author)
+  * [Where We Are From a Developer's Perspective](#where-we-are-from-a-developers-perspective)
+  * [What it's Like Coding with GPT-4](#what-its-like-coding-with-gpt-4)
+  * [What It Can Do](#what-it-can-do)
+  * [What It Can't Do](#what-it-cant-do)
+    * [Know the latest Libraries, APIs and Languages](#know-the-latest-libraries-apis-and-languages)
+    * [Be Consistent](#be-consistent)
+    * [Be Stable](#be-stable)
+  * [How do you write code using GPT-4?](#how-do-you-write-code-using-gpt-4)
+    * [Write Something, Anything](#write-something-anything)
+    * [Be Specific](#be-specific)
+    * [Be Patient](#be-patient)
+    * [And Iterate](#and-iterate)
+    * [Build on Previous Steps](#build-on-previous-steps)
+    * [Keep it in Context](#keep-it-in-context)
+  * [The Future](#the-future)
+    * [Deeper Tool Integration](#deeper-tool-integration)
+    * [Larger and Larger Contexts (with the goal being infinite)](#larger-and-larger-contexts--with-the-goal-being-infinite-)
+    * [Plugins, Thought Loops and Trial & Error](#plugins-thought-loops-and-trial--error)
+    * [Open Source Alternatives](#open-source-alternatives)
+  * [An Example](#an-example)
+    * [Get Some News Headlines](#get-some-news-headlines)
+    * [Better Headlines with Summary](#better-headlines-with-summary)
+    * [In Summary](#in-summary)
+  * [References](#references)
 <!-- TOC -->
 
 ## Before Reading This
@@ -50,7 +48,7 @@ as it is considerably more advanced than the original GPT-3.5.
 I'd also recommend you read up
 on [GPT-4 plugins](https://openai.com/blog/GPT-4-plugins), [GitHub Copilot](https://github.com/features/copilot/)
 and [GitHub Copilot X](https://github.com/features/preview/copilot-x) for extra credit read up
-on [Langchain](https://github.com/hwchase17/langchain).
+on [LangChain](https://github.com/hwchase17/langchain).
 
 ## The Author
 
@@ -67,7 +65,7 @@ Just as the Internet existed for two decades before the WWW started; so AI has b
 However, we clearly are in a WWW moment. With the release of GPT as a multi-modal AI being analogous to [Marc
 Andreessen adding the `<IMG>` tag](http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html) 30 years ago. We are
 now watching the most fundamental pieces of a new technology being put into place. I would even argue that the
-addition of [ReAct](https://arxiv.org/abs/2210.03629) in tools like [Langchain](https://github.com/hwchase17/langchain)
+addition of [ReAct](https://arxiv.org/abs/2210.03629) in tools like [LangChain](https://github.com/hwchase17/langchain)
 as being equivalent to [JavaScript in the browser](https://webdevelopmenthistory.com/1995-the-birth-of-javascript/), and
 GPT-4 plugins are probably Java Applets (let's try and forget about them).
 
@@ -265,7 +263,7 @@ the errors, almost certainly Google or Stack Overflow some of them. Think throug
 adjust it. Test the code. Realise we're doing it the wrong way, or a library is rubbish, try another way of coding the
 same problem, etc.
 
-This trial and error approach can be simulated using Langchain and a ReAct loop.
+This trial and error approach can be simulated using [LangChain](https://github.com/hwchase17/langchain) and a ReAct loop.
 
 This looks like:
 
@@ -608,21 +606,18 @@ GitHub, https://github.com/microsoft/LoRA. Accessed 29 Mar. 2023.
 ‘Hello Dolly: Democratizing the Magic of ChatGPT with Open Models’. Databricks, 24 Mar.
 2023, https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html.
 
-‘---’. Databricks, 24 Mar.
-2023, https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html.
-
 Introducing ChatGPT Plus. https://openai.com/blog/chatgpt-plus. Accessed 29 Mar. 2023.
 
 ‘Introducing GitHub Copilot X’. GitHub, https://github.com/features/preview/copilot-x. Accessed 29 Mar. 2023.
 
-Log in or Sign up to View. https://ai.facebook.com/blog/large-language-model-llama-meta-ai/. Accessed 29 Mar. 2023.
+'Introducing LLaMA: A foundational, 65-billion-parameter large language model'. https://ai.facebook.com/blog/large-language-model-llama-meta-ai/. Accessed 29 Mar. 2023.
 
 Stanford CRFM. https://crfm.stanford.edu/2023/03/13/alpaca.html. Accessed 29 Mar. 2023.
 
 WWW-Talk Jan-Mar 1993: Proposed New Tag: IMG. http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html. Accessed
 29 Mar. 2023.
 
----. http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html. Accessed 29 Mar. 2023.
+'proposed new tag: IMG' http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html. Accessed 29 Mar. 2023.
 
 Yao, Shunyu, et al. ReAct: Synergizing Reasoning and Acting in Language Models. arXiv, 9 Mar. 2023.
 arXiv.org, http://arxiv.org/abs/2210.03629.
