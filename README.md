@@ -128,15 +128,15 @@ Right now you can use it for:
 
 ## What It Can't Do
 
-Now let's look at the limitations and how they are being overcome or could be overcome. If you want to see a full
-interaction go wrong see my [bad example](bad_example.md).
+> If you want to see a full interaction go wrong see my [bad example](bad_example.md).
+
+Now let's look at the limitations and how they are being overcome, or could be overcome: 
 
 ### Know the latest Libraries, APIs and Languages
 
-The changing nature of libraries and the cost/time of training models means that tools like GPT-4 at present are always
-out of date. This can be tiresome and frustrating when GPT-4 is constantly suggesting out of date solutions such as
-believing that a library doesn't support the latest Twitter API. I've included a [bad example](bad_example.md) of
-the torture of its ignorance.
+The changing nature of libraries and the cost/time of training models means that tools like GPT-4, at present, are always
+out of date. This can be tiresome and frustrating when GPT-4 is constantly suggesting out of date solutions, such as
+believing that a library doesn't support the latest Twitter API. 
 
 This problem is likely to be at least partially solved by the use
 of [ChatGPT plugins](https://openai.com/blog/chatgpt-plugins) to pull in more up-to-date information on libraries.
