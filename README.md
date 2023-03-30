@@ -265,7 +265,7 @@ the errors, almost certainly Google or Stack Overflow some of them. Think throug
 adjust it. Test the code. Realise we're doing it the wrong way, or a library is rubbish, try another way of coding the
 same problem, etc.
 
-This trial and error approach can be simulated using [LangChain](https://github.com/hwchase17/langchain) and a ReAct loop.
+This trial and error approach can be simulated using [LangChain](https://github.com/hwchase17/langchain) and a [ReAct](https://arxiv.org/abs/2210.03629) loop.
 
 This looks like:
 
@@ -623,6 +623,3 @@ WWW-Talk Jan-Mar 1993: Proposed New Tag: IMG. http://1997.webhistory.org/www.lis
 
 Yao, Shunyu, et al. ReAct: Synergizing Reasoning and Acting in Language Models. arXiv, 9 Mar. 2023.
 arXiv.org, http://arxiv.org/abs/2210.03629.
-
----. ReAct: Synergizing Reasoning and Acting in Language Models. arXiv, 9 Mar. 2023.
-arXiv.org, https://doi.org/10.48550/arXiv.2210.03629.
