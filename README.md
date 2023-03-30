@@ -85,7 +85,9 @@ existing technologies easier. Meanwhile, it is rapidly learning to reason, gain 
 traits allowing it to take over tasks in the future which were previously exclusively the realm of humans.
 
 So with even AGI perhaps on the horizon it's easy to worry about the future of coding and coding jobs. But as you'll
-see, AI still has a long way to go to just be useful yet. But maybe consider a high level job in the long term!
+see, AI still has a long way to go to. 
+
+However, maybe consider a high level job in the long term!
 
 ## What it's Like Coding with GPT-4
 
