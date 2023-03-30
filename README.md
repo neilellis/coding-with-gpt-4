@@ -6,9 +6,12 @@ learning render information outdated almost as soon as it's disseminated. This i
 large language models (LLMs) like GPT-4. If you want to follow developments from a coding perspective I'd recommend you
 visit [Hacker News](https://news.ycombinator.com/news).
 
-If you prefer an academic style of writing check out this article as a [psuedo-academic paper](article_as_paper.md), or as a [talk](article_as_talk.md) (courtesy of GPT-4 of course!).
+If you prefer an academic style of writing check out this article as a [psuedo-academic paper](article_as_paper.md), or
+as a [talk](article_as_talk.md) (courtesy of GPT-4 of course!).
 
-Alternatively it is available as a full presentation [PPT](article_as_presentation.marp.pptx)/[HTML](article_as_presentation.marp.html) which me and GPT-4 deserve equal credit for.
+Alternatively it is available as a full
+presentation [PPT](article_as_presentation.marp.pptx)/[HTML](article_as_presentation.marp.html) which me and GPT-4
+deserve equal credit for.
 
 <!-- TOC -->
 * [Coding with GPT-4](#coding-with-gpt-4)
@@ -48,7 +51,7 @@ as it is considerably more advanced than the original GPT-3.5.
 
 I'd also recommend you read up
 on [GPT-4 plugins](https://openai.com/blog/GPT-4-plugins), [GitHub Copilot](https://github.com/features/copilot/)
-and [GitHub Copilot X](https://github.com/features/preview/copilot-x) for extra credit read up
+and [GitHub Copilot X](https://github.com/features/preview/copilot-x), [CatGPT](https://www.cat-gpt.com) for extra credit read up
 on [LangChain](https://github.com/hwchase17/langchain).
 
 ## The Author
@@ -85,7 +88,7 @@ existing technologies easier. Meanwhile, it is rapidly learning to reason, gain 
 traits allowing it to take over tasks in the future which were previously exclusively the realm of humans.
 
 So with even AGI perhaps on the horizon it's easy to worry about the future of coding and coding jobs. But as you'll
-see, AI still has a long way to go to. 
+see, AI still has a long way to go to.
 
 However, maybe consider a high level job in the long term!
 
@@ -130,13 +133,14 @@ Right now you can use it for:
 
 > If you want to see a full interaction go wrong see my [bad example](bad_example.md).
 
-Now let's look at the limitations and how they are being overcome, or could be overcome: 
+Now let's look at the limitations and how they are being overcome, or could be overcome:
 
 ### Know the latest Libraries, APIs and Languages
 
-The changing nature of libraries and the cost/time of training models means that tools like GPT-4, at present, are always
+The changing nature of libraries and the cost/time of training models means that tools like GPT-4, at present, are
+always
 out of date. This can be tiresome and frustrating when GPT-4 is constantly suggesting out of date solutions, such as
-believing that a library doesn't support the latest Twitter API. 
+believing that a library doesn't support the latest Twitter API.
 
 This problem is likely to be at least partially solved by the use
 of [ChatGPT plugins](https://openai.com/blog/chatgpt-plugins) to pull in more up-to-date information on libraries.
@@ -266,7 +270,8 @@ the errors, almost certainly Google or Stack Overflow some of them. Think throug
 adjust it. Test the code. Realise we're doing it the wrong way, or a library is rubbish, try another way of coding the
 same problem, etc.
 
-This trial and error approach can be simulated using [LangChain](https://github.com/hwchase17/langchain) and a [ReAct](https://arxiv.org/abs/2210.03629) loop.
+This trial and error approach can be simulated using [LangChain](https://github.com/hwchase17/langchain) and
+a [ReAct](https://arxiv.org/abs/2210.03629) loop.
 
 This looks like:
 
@@ -613,7 +618,8 @@ Introducing ChatGPT Plus. https://openai.com/blog/chatgpt-plus. Accessed 29 Mar.
 
 ‘Introducing GitHub Copilot X’. GitHub, https://github.com/features/preview/copilot-x. Accessed 29 Mar. 2023.
 
-'Introducing LLaMA: A foundational, 65-billion-parameter large language model'. https://ai.facebook.com/blog/large-language-model-llama-meta-ai/. Accessed 29 Mar. 2023.
+'Introducing LLaMA: A foundational, 65-billion-parameter large language
+model'. https://ai.facebook.com/blog/large-language-model-llama-meta-ai/. Accessed 29 Mar. 2023.
 
 Stanford CRFM. https://crfm.stanford.edu/2023/03/13/alpaca.html. Accessed 29 Mar. 2023.
 
