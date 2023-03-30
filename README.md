@@ -96,7 +96,7 @@ Amazing, painful, exhilarating, disturbing and frustrating.
 I'll break down the details later but as a quick overview, I'd say GPT-3.5 produces fairly unimpressive code and has
 a really short memory. GPT-4 produces good to great code, often better than I'd write especially in areas I'm less
 familiar with. It also has a longer memory and so can comprehend several parts of a larger application at once. But it
-just makes too many mistakes, mainly because of the original model data being so old, and changes its mind too much.
+just makes too many mistakes, mainly because of the original model data being so old, and changes its mind too often.
 
 So unless you're writing a simple one-off script you're unlikely to use what it produces as is.
 
