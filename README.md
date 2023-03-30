@@ -1,4 +1,4 @@
-# GPT-4 the Current and Future State of AI-Powered Code Writing
+# Coding with GPT-4
 
 **This WILL BE out of date** - we live in a rapidly evolving technological landscape, where advancements in AI and
 machine
