@@ -173,7 +173,7 @@ fine-tuning on the model will impose a standardized set of idioms.
 ### Be Stable
 
 GPT-4 is still very new, and it is not amazingly reliable, sometimes it just gives up halfway through the response, so
-you might have to prompt it again with 'continue'. These are all typical teething problems. These will be undoubtedly be
+you might have to prompt it again with 'continue'. These are all typical teething problems and will undoubtedly be
 fixed in the future, but right now can be a PITA.
 
 ## How do you write code using GPT-4?
