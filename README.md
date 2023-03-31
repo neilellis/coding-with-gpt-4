@@ -77,8 +77,8 @@ It is the public's willingness to adopt, AI's immediate value proposition and th
 have turned it from a technological pursuit into a burgeoning technological revolution. The potential is so obviously
 tremendous, but the uses so far are still **relatively** trivial.
 
-During any IT explosion there is a balance of Utility and Novelty. Initially it is skewed massively to Novelty and in
-time switching over to Utility. It took the WWW a decade to go from one to the other, via Dotcom boom
+During any IT explosion there is a balance of _Utility_ and _Novelty_. Initially it is skewed massively to _Novelty_ and in
+time switching over to _Utility_. It took the WWW a decade to go from one to the other, via Dotcom boom
 antics, cat photos, MySpace and to now being almost as fundamental as having water and electricity.
 
 So it shouldn't be a surprise that a lot of AI work currently is novelty, "it's cool but what can I do with it?". But
