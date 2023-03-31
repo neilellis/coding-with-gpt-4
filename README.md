@@ -67,10 +67,9 @@ all you need to know about the future of coding.
 Just as the Internet existed for two decades before the WWW started; so AI has been around a lot longer than GPT-4.
 
 However, we clearly are in a WWW moment. With the release of GPT as a multi-modal AI being analogous to [Marc
-Andreessen adding the `<IMG>` tag](http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html) 30 years ago. We are
-now watching the most fundamental pieces of a new technology being put into place. I would even argue that the
+Andreessen adding the `<IMG>` tag](http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html) 30 years ago. We are watching the most fundamental pieces of a new technology being put into place. I would further argue that the
 addition of [ReAct](https://arxiv.org/abs/2210.03629) in tools like [LangChain](https://github.com/hwchase17/langchain)
-as being equivalent to [JavaScript in the browser](https://webdevelopmenthistory.com/1995-the-birth-of-javascript/).
+as being equivalent to the adding of [JavaScript in the browser](https://webdevelopmenthistory.com/1995-the-birth-of-javascript/).
 
 GPT-4 plugins are probably Java Applets (let's try and forget about them).
 
