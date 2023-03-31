@@ -85,12 +85,12 @@ So it shouldn't be a surprise that a lot of AI work currently is novelty, "it's 
 don't be fooled, AI is an enabling technology that will just take time to become integrated in our lives. Unlike
 previous 'smart' technologies, it has the potential to actually understand our needs, habits and preferences making
 existing technologies easier. Meanwhile, it is rapidly learning to reason, gain theory of mind and many other human like
-traits allowing it to take over tasks in the future which were previously exclusively the realm of humans.
+traits allowing it to take over tasks in the future which were exclusively the realm of humans.
 
-So with even AGI perhaps on the horizon it's easy to worry about the future of coding and coding jobs. But as you'll
+Even with AGI perhaps on the horizon, it's easy to worry about the future of coding and coding jobs. But as you'll
 see, AI still has a long way to go to.
 
-However, maybe consider a high level job in the long term!
+> However, maybe consider a high level job in the long term!
 
 ## What it's Like Coding with GPT-4
 
@@ -99,7 +99,7 @@ Amazing, painful, exhilarating, disturbing and frustrating.
 I'll break down the details later but as a quick overview, I'd say GPT-3.5 produces fairly unimpressive code and has
 a really short memory. GPT-4 produces good to great code, often better than I'd write especially in areas I'm less
 familiar with. It also has a longer memory and so can comprehend several parts of a larger application at once. But it
-just makes too many mistakes, mainly because of the original model data being so old, and changes its mind too often.
+just makes too many mistakes, and changes its mind too often.
 
 Unless you're writing a simple one-off script you're unlikely to use what it produces as is.
 
