@@ -70,7 +70,8 @@ However, we clearly are in a WWW moment. With the release of GPT as a multi-moda
 Andreessen adding the `<IMG>` tag](http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html) 30 years ago. We are
 now watching the most fundamental pieces of a new technology being put into place. I would even argue that the
 addition of [ReAct](https://arxiv.org/abs/2210.03629) in tools like [LangChain](https://github.com/hwchase17/langchain)
-as being equivalent to [JavaScript in the browser](https://webdevelopmenthistory.com/1995-the-birth-of-javascript/), and
+as being equivalent to [JavaScript in the browser](https://webdevelopmenthistory.com/1995-the-birth-of-javascript/).
+
 GPT-4 plugins are probably Java Applets (let's try and forget about them).
 
 It is the public's willingness to adopt, their immediate value proposition and the general wow! factor that
