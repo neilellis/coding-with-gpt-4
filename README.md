@@ -83,12 +83,12 @@ antics, cat photos, MySpace and to now being almost as fundamental as having wat
 
 So it shouldn't be a surprise that a lot of AI work currently is novelty, "it's cool but what can I do with it?". But
 don't be fooled, AI is an enabling technology that will just take time to become integrated in our lives. Unlike
-previous 'smart' technologies, it has the potential to actually understand our needs, habits and preferences making
-existing technologies easier. Meanwhile, it is rapidly learning to reason, gain theory of mind and many other human like
-traits allowing it to take over tasks in the future which were exclusively the realm of humans.
+previous 'smart' technologies, it has the potential to actually understand our needs, habits and preferences - making
+existing technologies easier. Meanwhile, it is rapidly learning to reason, gain theory of mind, and many other human like
+traits. Allowing it to take over tasks in the future which were now exclusively the realm of humans.
 
 Even with AGI perhaps on the horizon, it's easy to worry about the future of coding and coding jobs. But as you'll
-see, AI still has a long way to go to.
+see, AI still has a long way to go to and there will be no immediate revolution.
 
 > However, maybe consider a high level job in the long term!
 
