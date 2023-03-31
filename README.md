@@ -108,10 +108,11 @@ let's look at what it can do for you.
 
 ## What It Can Do
 
-As I've hopefully established, it ain't taking programmers jobs just yet, that's for sure. At best, it's a great
+> Skip forward to [the example](#an-example) at the end if you want to see a full interaction.
+
+As I've hopefully established, it isn't taking programmers jobs just yet. At best, it's a great
 sidekick (or as Microsoft like to say Copilot) to help you brainstorm code and to sketch out the basics. However, it's
-trajectory has been set and all the evidence points to a rapidly evolving and improving technology. Skip forward
-to [the example](#an-example) at the end if you want to see a full interaction.
+trajectory has been set and all the evidence points to a rapidly evolving and improving technology.
 
 Right now you can use it for:
 
