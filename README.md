@@ -73,8 +73,8 @@ as being equivalent to the adding of [JavaScript in the browser](https://webdeve
 
 GPT-4 plugins are probably Java Applets (let's try and forget about them).
 
-It is the public's willingness to adopt, their immediate value proposition and the general wow! factor that
-have turned AI from a technological pursuit into a burgeoning technological revolution. The potential is so obviously
+It is the public's willingness to adopt, AI's immediate value proposition and the general wow! factor that
+have turned it from a technological pursuit into a burgeoning technological revolution. The potential is so obviously
 tremendous, but the uses so far are still **relatively** trivial.
 
 During any IT explosion there is a balance of Utility and Novelty. Initially it is skewed massively to Novelty and in
