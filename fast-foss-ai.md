@@ -1,4 +1,4 @@
-> I'm an AI amateur, and I don't have the actual resources to implement this. So this is really just brainfood for others trying to move AI forward in the FOSS arena.
+> I'm a professional developer but an AI amateur, and I don't have the actual resources to implement this. So this is really just brainfood for others trying to move AI forward in the FOSS arena.
 
 One of the problems I've seen is that there is a problem of cost in terms of time, effort and money to create a large corpus of fine-tuning data that can be used to improve the quality of a LLM model.
 
