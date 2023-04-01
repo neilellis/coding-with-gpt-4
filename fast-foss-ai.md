@@ -6,9 +6,15 @@ My suggestion is simple, affordable and I believe has the potential to be cost e
 
 ## 1. Start with a completely free model
 
+This can be a a relatively low quality model, as long as it can be trained to train itself.
+
 ## 2. Provide a base level of fine tuning - like Alpaca
 
-## 3. Add an additional set of fine tuning which has the single goal of being able to evaluate the quality of a chat conversation as further training data. **THIS IS THE IMPORTANT PART** It needs to be clear that the goal is a high quality, unbiased etc. conversation where being corrected is acceptable etc.
+So that it is possible to add the next level of fine-tuning.
+
+## 3. Train to train
+
+Add an additional set of fine tuning which has the single goal of being able to evaluate the quality of a chat conversation as further training data. **THIS IS THE IMPORTANT PART** It needs to be clear that the goal is a high quality, unbiased etc. conversation where being corrected is acceptable etc.
 
 ## 4. Self-Selected Reinforcement Learning
 
